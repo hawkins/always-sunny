@@ -1,0 +1,34 @@
+html,
+body {
+    margin: 0px;
+    /*   background-color: #0c0c0c; */
+    overflow: auto;
+}
+
+/* @font-face {
+    font-family: textile;
+    src: url(https://www.fontyukle.net/en/DownLoad-Textile.ttf);
+} */
+
+div.md-toolbar-tools,
+md-toolbar {
+    height: 100px;
+}
+
+h2.md-flex {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 64px !important;
+    line-height: 1.5em !important;
+    font-family: 'Caveat Brush', cursive;
+}
+
+body > div > md-content  {
+    padding-top: 15px;
+    position: relative;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    text-align: center;
+}
