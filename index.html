@@ -23,21 +23,34 @@
         <md-content>
             <h2 id="title"></h2>
             <h3 id="episode"></h3>
-            <h3 id="part"></h3>
+            <h3 id="part" style="display: none;"></h3>
+
             <p id="desc"></p>
             <p id="lead"></p>
-            <p id="authors"></p>
+            <p id="guest"></p>
+            <p id="writers"></p>
+            <a id="link" target='_blank'></a>
         </md-content>
 
-        <md-content id="main">
+        <md-content>
             <md-button class="md-raised md-primary" ng-click="getRandom()">Random</md-button>
+        </md-content>
 
+        <md-content>
             <!-- Lead Character -->
-            <md-radio-group ng-model="leadCharacter">
+            <md-radio-group ng-model="leadCharacter" layout="column" layout-align="center center">
                 <md-radio-button ng-repeat="char in characters" value="{{char}}">{{char}}</md-radio-button>
             </md-radio-group>
             <md-button class="md-raised md-primary" ng-click="getRandomByLead(leadCharacter)">By {{leadCharacter}} as Lead Character</md-button>
+        </md-content>
 
+
+        <md-content>
+            <!-- Writer -->
+            <md-radio-group ng-model="writer" layout="column" layout-align="center center">
+                <md-radio-button ng-repeat="w in writers | orderBy:'-count'" value="{{w.name}}">{{w.name}} ({{w.count}})</md-radio-button>
+            </md-radio-group>
+            <md-button class="md-raised md-primary" ng-click="getRandomByWriter(writer)">By {{writer}} as Writer</md-button>
         </md-content>
     </div>
     <!-- Angular Material requires Angular.js Libraries -->
@@ -48,7 +61,8 @@
 
     <!-- Angular Material Library -->
     <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
-    <script src="js/episodes.js"></script>
+    <script src="js/sunny.json"></script>
+    <script src="js/episodeDetails.js"></script>
     <script src="js/index.js"></script>
 </body>
 

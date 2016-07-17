@@ -1,22 +1,59 @@
-console.log(episodes);
-// $.getJSON("https://cdn.rawgit.com/hawkins/ef642c6cd2672eeb828a238bd4668931/raw/c23fcaeb9ec0c346ca187aa5115036bc47c01aee/always-sunny.json", function(data) {
-//     // Get the element with id summary and set the inner text to the result.
-//     episodes = data;
-//   console.log(episodes);
-// });
+console.log(sunny);
 
-select = function(item) {
-    $('#title').text(item.title);
-    $('#episode').text('Season ' + item.season + ': episode: ' + item.episode);
-    // TODO: Split by item.lead.length
-    $('#lead').text('Lead Character(s): ' + item.lead.join(', '));
-    $('#desc').text(item.description);
-    $('#author').text(item.authors);
-    if (item.part)
-        $('#part').text('Part ' + item.part);
-    else
-        $('#part').text('');
+getEpisodeItem = function (s, ep) {
+    return sunny.video.seasons[s - 1].episodes[ep - 1];
 }
+
+getEpisodeDetails = function (s, ep) {
+    for (var i = 0; i < episodeDetails.length; i++) {
+        if (s === episodeDetails[i].season && ep === episodeDetails[i].episode) {
+            return episodeDetails[i];
+        }
+    }
+}
+
+select = function(s, ep) {
+    var item = getEpisodeItem(s, ep);
+    var details = getEpisodeDetails(s, ep);
+
+    console.log('Selected', item, details);
+
+    // Item
+    $('#title').text(item.title);
+    $('#episode').text('Season ' + s + ': episode: ' + item.seq);
+    $('#desc').text(item.synopsis);
+    $('#link').attr('href', 'https://www.netflix.com/watch/' + item.episodeId);
+    $('#link').text('Watch on Netflix');
+
+    // Details
+    if (details) {
+        if (details.lead.length > 1)
+            $('#lead').html('<b>Lead Characters</b>: ' + details.lead.join(', '));
+        else
+            $('#lead').html('<b>Lead Character</b>: ' + details.lead.join(', '));
+        if (details.writers.length > 1)
+            $('#writers').html('<b>Writers</b>: ' + details.writers.join(', '));
+        else
+            $('#writers').html('<b>Writer</b>: ' + details.writers.join(', '));
+        if (details.part)
+            $('#part').text('Part <b>' + details.part.split('of').join('<b/> of <b>') + '</b>');
+        else
+            $('#part').text('');
+        if (details.guest)
+            $('#guest').html('<b>Guest(s):</b> ' + details.guest.join(', '));
+        else
+            $('#guest').text('');
+    } else {
+        $('#lead').text('');
+        $('#writers').text('');
+        $('#part').text('');
+        $('#guest').text('');
+    }
+}
+
+
+
+
 
 angular.module('SunnyApp', ['ngMaterial'])
     .config(function($mdThemingProvider) {
@@ -110,21 +147,60 @@ angular.module('SunnyApp', ['ngMaterial'])
         var app = $scope;
         app.leadCharacter = 'Charlie';
         app.characters = ['Charlie', 'Dennis', 'Dee', 'Frank', 'Mac'];
-        app.episodes = episodes;
 
-        app.getRandom = function() {
+        app.getWriters = function () {
+            var list = [];
+            for (var i = 0; i < episodeDetails.length; i++) {
+                for (var j = 0; j < episodeDetails[i].writers.length; j++) {
+                    for (var k = 0; k <= list.length; k++) {
+                        if (!list[k]) {
+                            list.push({name: episodeDetails[i].writers[j], count: 1});
+                            break;
+                        }
+                        if (list[k].name === episodeDetails[i].writers[j]) {
+                            list[k].count++;
+                            break;
+                        }
+                    }
+                }
+            }
+            return list;
+        };
+        app.writers = app.getWriters();
+        app.writer = app.writers[0].name;
+
+        app.getRandom = function () {
             console.log('Looking for random episode');
-            var item = episodes[Math.floor(Math.random() * episodes.length)];
-            select(item);
+            var s = Math.floor(Math.random() * sunny.video.seasons.length) + 1;
+            var ep = Math.floor(Math.random() * sunny.video.seasons[s - 1].episodes.length) + 1;
+            select(s, ep);
         };
 
-        app.getRandomByLead = function(lead) {
-            console.log('Looking for ' + lead);
+        app.getRandomByLead = function (lead) {
+            console.log('Looking for lead ' + lead);
 
             function includesLead(item) {
                 return item.lead.includes(lead);
             }
-            var includes = episodes.filter(includesLead);
-            select(includes[Math.floor(Math.random() * episodes.length)]);
-        }
+            var includes = episodeDetails.filter(includesLead);
+            var item;
+            while (!item)
+                item = includes[Math.floor(Math.random() * episodeDetails.length)]
+
+            select(item.season, item.episode);
+        };
+
+        app.getRandomByWriter = function (writer) {
+            console.log('Looking for writer ' + writer);
+
+            function includesWriter(item) {
+                return item.writers.includes(writer);
+            }
+            var includes = episodeDetails.filter(includesWriter);
+            var item;
+            while (!item)
+                item = includes[Math.floor(Math.random() * episodeDetails.length)]
+
+            select(item.season, item.episode);
+        };
     });

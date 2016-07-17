@@ -27,8 +27,12 @@ h2.md-flex {
 body > div > md-content  {
     padding-top: 15px;
     position: relative;
-    margin-left: 15%;
-    margin-right: 15%;
-    width: 70%;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
     text-align: center;
+}
+
+md-radio-button {
+    width: 200px;
 }
