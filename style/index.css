@@ -1,14 +1,11 @@
 html,
 body {
     margin: 0px;
-    /*   background-color: #0c0c0c; */
     overflow: auto;
+    overflow-x: hidden;
+    /*Mobile size*/
+    font-size: 1.25em;
 }
-
-/* @font-face {
-    font-family: textile;
-    src: url(https://www.fontyukle.net/en/DownLoad-Textile.ttf);
-} */
 
 div.md-toolbar-tools,
 md-toolbar {
@@ -19,20 +16,50 @@ h2.md-flex {
     width: 100%;
     height: 100%;
     text-align: center;
-    font-size: 64px !important;
-    line-height: 1.5em !important;
     font-family: 'Caveat Brush', cursive;
+    /*Mobile size*/
+    font-size: 32px;
+    line-height: 1.5em;
 }
 
 body > div > md-content  {
     padding-top: 15px;
-    position: relative;
-    margin-left: 25%;
-    margin-right: 25%;
-    width: 50%;
     text-align: center;
 }
 
 md-radio-button {
-    width: 200px;
+    margin-left: 25px;
+    width: calc(100% - 50px);
+    margin-right: 25px;
+}
+
+@media (min-width: 377px) {
+    h2.md-flex {
+        font-size: 48px !important;
+        line-height: 1em !important;
+    }
+}
+
+@media (min-width: 660px) {
+    html,
+    body {
+        font-size: 1.1em;
+    }
+
+    h2.md-flex {
+        font-size: 64px !important;
+        line-height: 1.5em !important;
+        white-space: nowrap;
+    }
+
+    body > div > md-content  {
+        position: relative;
+        margin-left: 25%;
+        margin-right: 25%;
+        width: 50%;
+    }
+
+    md-radio-button {
+        width: 200px;
+    }
 }
