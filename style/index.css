@@ -22,15 +22,33 @@ h2.md-flex {
     line-height: 1.5em;
 }
 
-body > div > md-content  {
+body > div > md-content {
     padding-top: 15px;
     text-align: center;
+    width: 100%;
 }
 
 md-radio-button {
     margin-left: 25px;
     width: calc(100% - 50px);
     margin-right: 25px;
+}
+
+
+#left,
+#right {
+    position: fixed;
+    font-size: 4em;
+    margin: 0;
+    height: 100%;
+    width: 5%;
+}
+#left {
+    left: 0px;
+}
+
+#right {
+    right: 0px;
 }
 
 @media (min-width: 377px) {
@@ -60,6 +78,6 @@ md-radio-button {
     }
 
     md-radio-button {
-        width: 200px;
+        width: 240px;
     }
 }

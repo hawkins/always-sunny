@@ -12,45 +12,6 @@ getEpisodeDetails = function (s, ep) {
     }
 }
 
-select = function(s, ep) {
-    var item = getEpisodeItem(s, ep);
-    var details = getEpisodeDetails(s, ep);
-
-    console.log('Selected', item, details);
-
-    // Item
-    $('#title').text(item.title);
-    $('#episode').text('Season ' + s + ': episode: ' + item.seq);
-    $('#desc').text(item.synopsis);
-    $('#link').attr('href', 'https://www.netflix.com/watch/' + item.episodeId);
-    $('#link').text('Watch on Netflix');
-
-    // Details
-    if (details) {
-        if (details.lead.length > 1)
-            $('#lead').html('<b>Lead Characters</b>: ' + details.lead.join(', '));
-        else
-            $('#lead').html('<b>Lead Character</b>: ' + details.lead.join(', '));
-        if (details.writers.length > 1)
-            $('#writers').html('<b>Writers</b>: ' + details.writers.join(', '));
-        else
-            $('#writers').html('<b>Writer</b>: ' + details.writers.join(', '));
-        if (details.part)
-            $('#part').text('Part <b>' + details.part.split('of').join('<b/> of <b>') + '</b>');
-        else
-            $('#part').text('');
-        if (details.guest)
-            $('#guest').html('<b>Guest(s):</b> ' + details.guest.join(', '));
-        else
-            $('#guest').text('');
-    } else {
-        $('#lead').text('');
-        $('#writers').text('');
-        $('#part').text('');
-        $('#guest').text('');
-    }
-}
-
 
 
 
@@ -148,6 +109,80 @@ angular.module('SunnyApp', ['ngMaterial'])
         app.leadCharacter = 'Charlie';
         app.characters = ['Charlie', 'Dennis', 'Dee', 'Frank', 'Mac'];
 
+        app.select = function(s, ep) {
+            app.selected = [s, ep];
+            var item = getEpisodeItem(s, ep);
+            var details = getEpisodeDetails(s, ep);
+
+            console.log('Selected', item, details);
+
+            // Item
+            $('#title').text(item.title);
+            $('#episode').text('Season ' + s + ': episode: ' + item.seq);
+            $('#desc').text(item.synopsis);
+            $('#link').attr('href', 'https://www.netflix.com/watch/' + item.episodeId);
+            $('#link').text('Watch on Netflix');
+
+            // Details
+            if (details) {
+                if (details.lead.length > 1)
+                    $('#lead').html('<b>Lead Characters</b>: ' + details.lead.join(', '));
+                else
+                    $('#lead').html('<b>Lead Character</b>: ' + details.lead.join(', '));
+                if (details.writers.length > 1)
+                    $('#writers').html('<b>Writers</b>: ' + details.writers.join(', '));
+                else
+                    $('#writers').html('<b>Writer</b>: ' + details.writers.join(', '));
+                if (details.part)
+                    $('#part').text('Part <b>' + details.part.split('of').join('<b/> of <b>') + '</b>');
+                else
+                    $('#part').text('');
+                if (details.guest && details.guest.length)
+                    $('#guest').html('<b>Guest(s):</b> ' + details.guest.join(', '));
+                else
+                    $('#guest').text('');
+            } else {
+                $('#lead').text('');
+                $('#writers').text('');
+                $('#part').text('');
+                $('#guest').text('');
+            }
+        }
+
+        app.next = function () {
+            if (app.selected) {
+                // If last episode in this season
+                if (app.selected[1] === sunny.video.seasons[app.selected[0] - 1].episodes.length) {
+                    // If last season in this show
+                    if (app.selected[0] === sunny.video.seasons.length)
+                        app.select(1, 1);
+                    else
+                        app.select(app.selected[0] + 1, 1);
+                } else {
+                    app.select(app.selected[0], app.selected[1] + 1);
+                }
+            } else {
+                app.select(1, 1);
+            }
+        }
+
+        app.previous = function () {
+            if (app.selected) {
+                // If first episode in this season
+                if (app.selected[1] === 1) {
+                    // If first season in this show
+                    if (app.selected[0] === 1)
+                        app.select(sunny.video.seasons.length, sunny.video.seasons[sunny.video.seasons.length - 1].episodes.length);
+                    else
+                        app.select(app.selected[0] - 1, sunny.video.seasons[app.selected[0] - 2].episodes.length);
+                } else {
+                    app.select(app.selected[0], app.selected[1] - 1);
+                }
+            } else {
+                app.select(sunny.video.seasons.length, sunny.video.seasons[sunny.video.seasons.length - 1].episodes.length);
+            }
+        }
+
         app.getWriters = function () {
             var list = [];
             for (var i = 0; i < episodeDetails.length; i++) {
@@ -173,7 +208,7 @@ angular.module('SunnyApp', ['ngMaterial'])
             console.log('Looking for random episode');
             var s = Math.floor(Math.random() * sunny.video.seasons.length) + 1;
             var ep = Math.floor(Math.random() * sunny.video.seasons[s - 1].episodes.length) + 1;
-            select(s, ep);
+            app.select(s, ep);
         };
 
         app.getRandomByLead = function (lead) {
@@ -187,7 +222,7 @@ angular.module('SunnyApp', ['ngMaterial'])
             while (!item)
                 item = includes[Math.floor(Math.random() * episodeDetails.length)]
 
-            select(item.season, item.episode);
+            app.select(item.season, item.episode);
         };
 
         app.getRandomByWriter = function (writer) {
@@ -201,6 +236,6 @@ angular.module('SunnyApp', ['ngMaterial'])
             while (!item)
                 item = includes[Math.floor(Math.random() * episodeDetails.length)]
 
-            select(item.season, item.episode);
+            app.select(item.season, item.episode);
         };
     });

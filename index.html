@@ -14,6 +14,10 @@
 </head>
 
 <body ng-app="SunnyApp" ng-cloak ng-controller="sunnyCtrl">
+
+    <md-button id="left" ng-click="previous();">&#10096;</md-button>
+    <md-button id="right" ng-click="next();">&#10097;</md-button>
+
     <div layout="column">
         <md-toolbar class="md-primary">
             <div class="md-toolbar-tools">
@@ -45,7 +49,6 @@
             <md-button class="md-raised md-primary" ng-click="getRandomByLead(leadCharacter)">By {{leadCharacter}} as Lead Character</md-button>
         </md-content>
 
-
         <md-content>
             <!-- Writer -->
             <md-radio-group ng-model="writer" layout="column" layout-align="center center">
@@ -54,6 +57,7 @@
             <md-button class="md-raised md-primary" ng-click="getRandomByWriter(writer)">By {{writer}} as Writer</md-button>
         </md-content>
     </div>
+
     <!-- Angular Material requires Angular.js Libraries -->
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
