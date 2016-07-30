@@ -110,7 +110,8 @@ angular.module('SunnyApp', ['ngMaterial'])
         app.characters = ['Charlie', 'Dennis', 'Dee', 'Frank', 'Mac'];
         app.tips = [
             'Psst, mobile users, try swiping left/right!',
-            'Psst, desktop users, try clicking the edges of your screen!'
+            'Psst, desktop users, try clicking the edges of your screen!',
+            'Check us out on GitHub! github.com/hawkins/always-sunny'
         ]
 
         app.loadRandomTip = function() {

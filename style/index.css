@@ -7,7 +7,8 @@ body {
     font-size: 1.25em;
 }
 .mobile {
-    font-size: 1em;
+    /*font-size: 1em;*/
+    /*font-weight: bold;*/
 }
 
 div.md-toolbar-tools,
@@ -21,8 +22,8 @@ h2.md-flex {
     text-align: center;
     font-family: 'Caveat Brush', cursive;
     /*Mobile size*/
-    font-size: 32px;
-    line-height: 1.5em;
+    font-size: 48px;
+    line-height: 1em;
 }
 
 md-content {
@@ -98,14 +99,7 @@ blockquote {
     right: 0px;
 }
 
-@media (min-width: 377px) {
-    h2.md-flex {
-        font-size: 48px !important;
-        line-height: 1em !important;
-    }
-}
-
-@media (min-width: 660px) {
+@media (min-width: 531px) {
     html,
     body {
         font-size: 1.1em;

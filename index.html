@@ -5,6 +5,10 @@
     <!-- Angular Material style sheet -->
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
     <link href='https://fonts.googleapis.com/css?family=Caveat+Brush' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+
+    <!-- Bulma -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.1.0/css/bulma.min.css"></link> -->
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -14,9 +18,10 @@
 
     <link rel="stylesheet" href="style/index.css" type='text/css' />
     <meta name="theme-color" content="#eab608">
+    <title>The Gang Picks an Episode</title>
 </head>
 
-<body ng-app="SunnyApp" ng-cloak ng-controller="sunnyCtrl" md-swipe-left="onSwipeLeft()" md-swipe-right="onSwipeRight()">
+<body ng-app="SunnyApp" ng-cloak ng-controller="sunnyCtrl" md-swipe-left="onSwipeLeft()" md-swipe-right="onSwipeRight()" class="wrapper">
 
     <md-button id="left" ng-click="previous();">&#10096;</md-button>
     <md-button id="right" ng-click="next();">&#10097;</md-button>
@@ -24,7 +29,7 @@
     <div layout="column">
         <md-toolbar class="md-primary">
             <div class="md-toolbar-tools">
-                <h2 class="md-flex">"It's Always Sunny in Philadelphia"</h2>
+                <h2 class="md-flex">"The Gang Picks an Episode"</h2>
             </div>
         </md-toolbar>
 
@@ -42,12 +47,12 @@
             <br/><br/>
         </md-content>
 
-        <div class="flexcontainer">
-            <md-content>
+        <div class="flexcontainer f">
+            <md-content class="f">
                 <md-button class="md-raised md-primary mobile" ng-click="getRandom()">Random episode</md-button>
             </md-content>
 
-            <md-content>
+            <md-content class="f">
                 <!-- Lead Character -->
                 <md-button class="md-raised md-primary mobile" ng-click="getRandomByLead(leadCharacter)">By {{leadCharacter}} as Lead Character</md-button>
                 <md-radio-group ng-model="leadCharacter" layout="column" layout-align="center center">
@@ -55,7 +60,7 @@
                 </md-radio-group>
             </md-content>
 
-            <md-content>
+            <md-content class="f">
                 <!-- Writer -->
                 <md-button class="md-raised md-primary mobile" ng-click="getRandomByWriter(writer)">By {{writer}} as Writer</md-button>
                 <md-select ng-model="writer">
@@ -75,7 +80,7 @@
 
     <div id="help" class="modal">
         <div class="modal-content">
-            <p>Thank you for checking out Always Sunny Episode Picker!</p>
+            <p>Thank you for checking out The Gang Picks an Episode!</p>
             <p>If you have any suggestions or issues, please leave them <a class="md-primary" href="https://github.com/hawkins/always-sunny/issues">here!</a> :)</p>
             <md-button class="md-raised md-primary" onclick="$('#help').popup('hide')";>OK!</md-button>
         </div>

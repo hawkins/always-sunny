@@ -1,7 +1,5 @@
-# It's Always Sunny in Philadelphia Episode Picker
+# The Gang Picks an Episode
 
-Whew! Boy, that's a mouthful, huh? If you can think of a catchier name, *open an issue, please!*
+This project aims to provide users with a tool to pick a random episode of It's Always Sunny in Philadelphia based on some chosen criterion.
 
-# About Project
-
-This project aims to provide users with a tool to pick a random episode of It's Always Sunny in Philadelphia based on some chosen criterion. 
+[Check it out here!](http://thegangpicksanepisode.com/)
