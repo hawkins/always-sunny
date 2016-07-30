@@ -6,6 +6,9 @@ body {
     /*Mobile size*/
     font-size: 1.25em;
 }
+.mobile {
+    font-size: 1em;
+}
 
 div.md-toolbar-tools,
 md-toolbar {
@@ -22,19 +25,64 @@ h2.md-flex {
     line-height: 1.5em;
 }
 
-body > div > md-content {
+md-content {
     padding-top: 15px;
     text-align: center;
     width: 100%;
 }
-
+div.flexcontainer {
+    display: flex;
+    flex-direction: column;
+}
+div.flexcontainer > md-content {
+    width: 100%;
+}
+md-select {
+    margin: 10%;
+}
+md-option div {
+    font-size: 1em;
+}
 md-radio-button {
     margin-left: 25px;
     width: calc(100% - 50px);
     margin-right: 25px;
 }
 
+/* Select */
+md-option.md-primary,
+md-option.md-primary div {
+    color: #eab608;
+}
 
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+}
+
+/* Tips */
+blockquote {
+    color: #fefefe;
+    padding: 10px;
+    background-color: #333;
+    border-left: 8px solid #eab608;
+}
+#tip {
+    font-style: italic;
+}
+#help {
+  transform: scale(0.8);
+}
+.popup_visible #help {
+  transform: scale(1);
+}
+
+/* Left/right */
 #left,
 #right {
     position: fixed;
@@ -46,7 +94,6 @@ md-radio-button {
 #left {
     left: 0px;
 }
-
 #right {
     right: 0px;
 }
@@ -69,15 +116,30 @@ md-radio-button {
         line-height: 1.5em !important;
         white-space: nowrap;
     }
+}
 
+@media (min-width: 990px) {
+    div.flexcontainer {
+        flex-direction: row;
+    }
+    div.flexcontainer > md-content {
+        width: calc(100% / 3);
+    }
+
+    body > div > div.flexcontainer,
     body > div > md-content  {
+        overflow-x: hidden;
         position: relative;
-        margin-left: 25%;
-        margin-right: 25%;
-        width: 50%;
+        margin-left: 20%;
+        margin-right: 20%;
+        width: 60%;
     }
 
     md-radio-button {
         width: 240px;
+    }
+
+    .mobile {
+        font-size: 0.7em;
     }
 }

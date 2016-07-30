@@ -108,6 +108,19 @@ angular.module('SunnyApp', ['ngMaterial'])
         var app = $scope;
         app.leadCharacter = 'Charlie';
         app.characters = ['Charlie', 'Dennis', 'Dee', 'Frank', 'Mac'];
+        app.tips = [
+            'Psst, mobile users, try swiping left/right!',
+            'Psst, desktop users, try clicking the edges of your screen!'
+        ]
+
+        app.loadRandomTip = function() {
+            // Load a random tip into #tip
+            app.tip = app.tips[Math.floor(Math.random()*app.tips.length)];
+            console.log(app.tip);
+            $('#tip').text(app.tip);
+        }
+
+        app.loadRandomTip();
 
         app.select = function(s, ep) {
             app.selected = [s, ep];
@@ -166,6 +179,10 @@ angular.module('SunnyApp', ['ngMaterial'])
             }
         }
 
+        app.onSwipeRight = function (ev) {
+            app.previous();
+        }
+
         app.previous = function () {
             if (app.selected) {
                 // If first episode in this season
@@ -181,6 +198,10 @@ angular.module('SunnyApp', ['ngMaterial'])
             } else {
                 app.select(sunny.video.seasons.length, sunny.video.seasons[sunny.video.seasons.length - 1].episodes.length);
             }
+        }
+
+        app.onSwipeLeft = function (ev) {
+            app.next();
         }
 
         app.getWriters = function () {

@@ -8,12 +8,15 @@
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include jQuery Popup Overlay -->
+    <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
+
 
     <link rel="stylesheet" href="style/index.css" type='text/css' />
     <meta name="theme-color" content="#eab608">
 </head>
 
-<body ng-app="SunnyApp" ng-cloak ng-controller="sunnyCtrl">
+<body ng-app="SunnyApp" ng-cloak ng-controller="sunnyCtrl" md-swipe-left="onSwipeLeft()" md-swipe-right="onSwipeRight()">
 
     <md-button id="left" ng-click="previous();">&#10096;</md-button>
     <md-button id="right" ng-click="next();">&#10097;</md-button>
@@ -35,27 +38,47 @@
             <p id="guest"></p>
             <p id="writers"></p>
             <a id="link" target='_blank'></a>
+
+            <br/><br/>
         </md-content>
 
-        <md-content>
-            <md-button class="md-raised md-primary" ng-click="getRandom()">Random</md-button>
-        </md-content>
+        <div class="flexcontainer">
+            <md-content>
+                <md-button class="md-raised md-primary mobile" ng-click="getRandom()">Random episode</md-button>
+            </md-content>
+
+            <md-content>
+                <!-- Lead Character -->
+                <md-button class="md-raised md-primary mobile" ng-click="getRandomByLead(leadCharacter)">By {{leadCharacter}} as Lead Character</md-button>
+                <md-radio-group ng-model="leadCharacter" layout="column" layout-align="center center">
+                    <md-radio-button ng-repeat="char in characters" value="{{char}}">{{char}}</md-radio-button>
+                </md-radio-group>
+            </md-content>
+
+            <md-content>
+                <!-- Writer -->
+                <md-button class="md-raised md-primary mobile" ng-click="getRandomByWriter(writer)">By {{writer}} as Writer</md-button>
+                <md-select ng-model="writer">
+                    <md-option class="md-primary" ng-repeat="w in writers | orderBy:'-count'" value="{{w.name}}">{{w.name}} ({{w.count}})</md-option>
+                </md-select>
+            </md-content>
+        </div>
 
         <md-content>
-            <!-- Lead Character -->
-            <md-radio-group ng-model="leadCharacter" layout="column" layout-align="center center">
-                <md-radio-button ng-repeat="char in characters" value="{{char}}">{{char}}</md-radio-button>
-            </md-radio-group>
-            <md-button class="md-raised md-primary" ng-click="getRandomByLead(leadCharacter)">By {{leadCharacter}} as Lead Character</md-button>
+            <blockquote>
+                <!-- <b>Tip of the Day</b>
+                <br/> -->
+                <span id="tip"></span>
+            </blockquote>
         </md-content>
+    </div>
 
-        <md-content>
-            <!-- Writer -->
-            <md-radio-group ng-model="writer" layout="column" layout-align="center center">
-                <md-radio-button ng-repeat="w in writers | orderBy:'-count'" value="{{w.name}}">{{w.name}} ({{w.count}})</md-radio-button>
-            </md-radio-group>
-            <md-button class="md-raised md-primary" ng-click="getRandomByWriter(writer)">By {{writer}} as Writer</md-button>
-        </md-content>
+    <div id="help" class="modal">
+        <div class="modal-content">
+            <p>Thank you for checking out Always Sunny Episode Picker!</p>
+            <p>If you have any suggestions or issues, please leave them <a class="md-primary" href="https://github.com/hawkins/always-sunny/issues">here!</a> :)</p>
+            <md-button class="md-raised md-primary" onclick="$('#help').popup('hide')";>OK!</md-button>
+        </div>
     </div>
 
     <!-- Angular Material requires Angular.js Libraries -->
@@ -69,6 +92,21 @@
     <script src="js/sunny.json"></script>
     <script src="js/episodeDetails.js"></script>
     <script src="js/index.js"></script>
+    <script>
+    $(function () {
+        $('#help').popup({
+            transition: 'all 0.3s'
+        });
+        if (!localStorage['firstVisit'] || localStorage['firstVisit'] === 'false') {
+            localStorage['firstVisit'] = 'true';
+            $('#help').popup('show');
+            console.log('Detected first time visitor! Welcome! :D');
+        }
+        function resetFirstVisit() {
+            localStorage['firstVisit'] = 'false';
+        }
+    });
+    </script>
 </body>
 
 </html>
