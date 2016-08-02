@@ -260,4 +260,8 @@ angular.module('SunnyApp', ['ngMaterial'])
 
             app.select(item.season, item.episode);
         };
+
+        app.init = function () {
+            app.getRandom();
+        }();
     });
