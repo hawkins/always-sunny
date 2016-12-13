@@ -7,7 +7,7 @@ html,
 body {
     background-color: #5c5c5c;
     text-align: center;
-    font-size: 0.9em !important;
+    font-size: 0.9em !important; /* Why do react-toolbox css rules overule ours? */
 }
 
 
@@ -151,4 +151,5 @@ input {
     background-color: #555;
     margin: auto;
     max-width: 200px;
+    font-size: 1.2rem !important /* Why do react-toolbox css rules overule ours? */
 }
