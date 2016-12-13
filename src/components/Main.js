@@ -5,8 +5,8 @@ import Controls from './Controls.js';
 import Search from './Search.js';
 
 // Data
-import EpisodeDetails from '../Data/EpisodeDetails.js';
-import Sunny from '../Data/Sunny.js';
+import EpisodeDetails from '../data/EpisodeDetails.js';
+import Sunny from '../data/Sunny.js';
 
 //------------------------------------------------------------------------------
 // Helper functions to manage data
@@ -42,9 +42,7 @@ function getWriters (lead) {
   }
 
   // Sort in descending order
-  list.sort(function(a, b) {
-    return b.count - a.count;
-  });
+  list.sort((a, b) => b.count - a.count);
 
   return list;
 }
@@ -52,12 +50,7 @@ function getWriters (lead) {
 function getAllEpisodes () {
   var episodes = [];
   for (var i = 0; i < EpisodeDetails.length; i++) {
-    try {
-      episodes.push(getEpisodeDetails(EpisodeDetails[i].season, EpisodeDetails[i].episode));
-    } catch(err) {
-      console.warn('Need to fix #4');
-      console.warn(err);
-    }
+    episodes.push(getEpisodeDetails(EpisodeDetails[i].season, EpisodeDetails[i].episode));
   }
   return episodes;
 }

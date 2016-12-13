@@ -1146,30 +1146,7 @@ var EpisodeDetails = [
     {
         season:6,
         episode:13,
-        part:"1 of 2",
-        lead:[
-            "Dee",
-            "Dennis",
-            "Mac",
-            "Charlie"
-        ],
-        guest:[
-            "Eugene",
-            "Luther",
-            "Mrs. Mac",
-            "Mrs. Kelly"
-        ],
-        writers:[
-            "Charlie Day",
-            "David Hornsby",
-            "Becky Mann",
-            "Audra Sielaff"
-        ]
-    },
-    {
-        season:6,
-        episode:14,
-        part:"2 of 2",
+        part:"1 & 2 of 2",
         lead:[
             "Dee",
             "Dennis",
@@ -1438,8 +1415,7 @@ var EpisodeDetails = [
             "Bill Ponderosa",
             "Maureen Ponderosa",
             "Liam McPoyle",
-            "Ryan McPoyle",
-            "Maureen Ponderosa"
+            "Ryan McPoyle"
         ],
         writers:[
             "Charlie Day",
