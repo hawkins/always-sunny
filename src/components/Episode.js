@@ -24,7 +24,7 @@ class Episode extends Component {
 
         <p className="description">{this.props.episode.description}</p>
 
-        <p><b>Lead characters: </b>{this.props.episode.lead.map(commaSeparatedItems)}</p>
+        <p><b>Lead characters: </b><span className="dark">{this.props.episode.lead.map(commaSeparatedItems)}</span></p>
         {this.props.episode.guest ? <p><b>Guest characters: </b> <span className="dark">{this.props.episode.guest.map(commaSeparatedItems)}</span></p> : undefined}
         <p><b>Written by: </b><span className="dark">{this.props.episode.writers.map(commaSeparatedItems)}</span></p>
 

@@ -1885,6 +1885,185 @@ var EpisodeDetails = [
         writers:[
             "Scott Marder"
         ]
-    }
+    },
+    {
+        season:11,
+        episode:1,
+        part:null,
+        lead:[
+            "Frank",
+            "Dennis",
+            "Charlie"
+        ],
+        guest:[
+            "Andy from \'Matel\'",
+            "The Waitress"
+        ],
+        writers:[
+            "Rob McElhenney",
+            "Charlie Day"
+        ]
+    },
+    {
+        season:11,
+        episode:2,
+        part:null,
+        lead:[
+            "Frank",
+            "Charlie"
+        ],
+        guest:[
+            "The Waitress"
+        ],
+        writers:[
+            "David Hornsby"
+        ]
+    },
+    {
+        season:11,
+        episode:3,
+        part:null,
+        lead:[
+            "Charlie",
+            "Dennis",
+            "Dee",
+            "Mac"
+        ],
+        guest:[
+            "Drisko",
+            "Roach",
+            "Turkey",
+            "Tatiana"
+        ],
+        writers:[
+            "Dave Chernin",
+            "John Chernin"
+        ]
+    },
+    {
+        season:11,
+        episode:4,
+        part:null,
+        lead:[
+            "Dee",
+            "Charlie",
+            "Dennis"
+        ],
+        guest:[
+            "Richard Grieco",
+            "Art Gallery Renter",
+            "Rickety Cricket"
+        ],
+        writers:[
+            "Eric Ledgin"
+        ]
+    },
+    {
+        season:11,
+        episode:5,
+        part:null,
+        lead:[
+            "Dennis",
+            "Mac"
+        ],
+        guest:[
+            "Wally Schmidt",
+            "\'Old Black Man\'"
+        ],
+        writers:[
+            "Hunter Covington"
+        ]
+    },
+    {
+        season:11,
+        episode:6,
+        part:null,
+        lead:[
+            "Frank",
+            "Dennis"
+        ],
+        guest:[
+            "Bill Ponderosa",
+            "The Landlord",
+            "Artemis",
+
+        ],
+        writers:[
+            "Scott Marder"
+        ]
+    },
+    {
+        season:11,
+        episode:7,
+        part:null,
+        lead:[
+            "Charlie",
+            "Mac"
+        ],
+        guest:[
+            "Bill Ponderosa",
+            "Maureen Ponderosa",
+            "Uncle Jack",
+            "The Lawyer",
+            "Margaret McPoyle",
+            "Lion McPoyle",
+            "Pappy McPoyle",
+            "Royal McPoyle"
+        ],
+        writers:[
+            "Conor Galvin"
+        ]
+    },
+    {
+        season:11,
+        episode:8,
+        part:null,
+        lead:[
+            "Dennis",
+            "Dee",
+            "Charlie"
+        ],
+        guest:[
+            "The Leprechaun"
+        ],
+        writers:[
+            "Jon Silberman",
+            "Josh Silberman"
+        ]
+    },
+    {
+        season:11,
+        episode:9,
+        part:'1 of 2',
+        lead:[
+            "Mac",
+            "Dennis"
+        ],
+        guest:[
+            "The Gay Pastors",
+            "The Young Virgin"
+        ],
+        writers:[
+            "David Hornsby",
+            "Scott Marder"
+        ]
+    },
+    {
+        season:11,
+        episode:10,
+        part:'2 of 2',
+        lead:[
+            "Dee",
+            "Dennis",
+            "Mac",
+            "Charlie",
+            "Frank"
+        ],
+        writers:[
+            "David Hornsby",
+            "Scott Marder"
+        ]
+    },
 ];
+
 export default EpisodeDetails;
