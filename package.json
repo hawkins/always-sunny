@@ -45,6 +45,7 @@
     "recursive-readdir": "2.1.0",
     "rimraf": "2.5.4",
     "sass-loader": "^4.0.2",
+    "serve": "^3.2.7",
     "strip-ansi": "3.0.1",
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",
@@ -60,6 +61,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
+    "now-start": "serve build",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "buildserver": "npm run build && pushstate-server build"

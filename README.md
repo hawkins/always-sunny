@@ -13,5 +13,5 @@ I love contributions of any kind! Just open an Issue or PR to discuss what you'd
 ### Dev environment setup
 
 1. Clone repo
-2. $ npm install
-3. npm start
+2. `$ npm install`
+3. `$ npm start`
