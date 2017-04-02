@@ -1896,7 +1896,7 @@ var EpisodeDetails = [
             "Charlie"
         ],
         guest:[
-            "Andy from \'Matel\'",
+            "Andy from 'Matel'",
             "The Waitress"
         ],
         writers:[
@@ -1968,7 +1968,7 @@ var EpisodeDetails = [
         ],
         guest:[
             "Wally Schmidt",
-            "\'Old Black Man\'"
+            "'Old Black Man'"
         ],
         writers:[
             "Hunter Covington"
