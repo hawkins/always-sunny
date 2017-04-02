@@ -10,24 +10,21 @@ import Sunny from '../data/Sunny.js';
 
 //------------------------------------------------------------------------------
 // Helper functions to manage data
-function getWriters (lead) {
-  var list = [{value: 'All', count: 0}];
+function getWriters(lead) {
+  var list = [{ value: 'All', count: 0 }];
 
   for (var i = 0; i < EpisodeDetails.length; i++) {
-
     // Only consider episodes with our lead character prominent
     if (lead === 'All' || EpisodeDetails[i].lead.includes(lead)) {
-
       // Increment 'All' count
       list[0].count++;
 
       for (var j = 0; j < EpisodeDetails[i].writers.length; j++) {
-
         // Find writer in list and increment count
         for (var k = 0; k <= list.length; k++) {
           if (!list[k]) {
             // Add this writer to list
-            list.push({value: EpisodeDetails[i].writers[j], count: 1});
+            list.push({ value: EpisodeDetails[i].writers[j], count: 1 });
             break;
           }
 
@@ -47,15 +44,17 @@ function getWriters (lead) {
   return list;
 }
 
-function getAllEpisodes () {
+function getAllEpisodes() {
   var episodes = [];
   for (var i = 0; i < EpisodeDetails.length; i++) {
-    episodes.push(getEpisodeDetails(EpisodeDetails[i].season, EpisodeDetails[i].episode));
+    episodes.push(
+      getEpisodeDetails(EpisodeDetails[i].season, EpisodeDetails[i].episode)
+    );
   }
   return episodes;
 }
 
-function getEpisodeDetails (s, ep) {
+function getEpisodeDetails(s, ep) {
   var details = {};
   for (var i = 0; i < EpisodeDetails.length; i++) {
     if (s === EpisodeDetails[i].season && ep === EpisodeDetails[i].episode) {
@@ -71,55 +70,86 @@ function getEpisodeDetails (s, ep) {
   return details;
 }
 
-function getPreviousEpisode (episode) {
+function getPreviousEpisode(episode) {
   var s = episode.season;
   var e = episode.episode;
   // If first episode in this season
   if (e === 1) {
     // If first season
     if (s === 1)
-      return getEpisodeDetails(Sunny.video.seasons.length, Sunny.video.seasons[Sunny.video.seasons.length - 1].episodes.length);
+      return getEpisodeDetails(
+        Sunny.video.seasons.length,
+        Sunny.video.seasons[Sunny.video.seasons.length - 1].episodes.length
+      );
     else
-      return getEpisodeDetails(s - 1, Sunny.video.seasons[s - 2].episodes.length);
+      return getEpisodeDetails(
+        s - 1,
+        Sunny.video.seasons[s - 2].episodes.length
+      );
   } else {
     return getEpisodeDetails(s, e - 1);
   }
 }
 
-function getNextEpisode (episode) {
+function getNextEpisode(episode) {
   var s = episode.season;
   var e = episode.episode;
   // If last episode in this season
   if (e === Sunny.video.seasons[s - 1].episodes.length) {
     // If last season
-    if (s === Sunny.video.seasons.length)
-      return getEpisodeDetails(1, 1);
-    else
-      return getEpisodeDetails(s + 1, 1);
+    if (s === Sunny.video.seasons.length) return getEpisodeDetails(1, 1);
+    else return getEpisodeDetails(s + 1, 1);
   } else {
     return getEpisodeDetails(s, e + 1);
   }
 }
 
-function getRandomEpisode (lead, writer) {
-  var includes = EpisodeDetails.filter((item) => {
-    return (lead === 'All' || item.lead.includes(lead)) && (writer === 'All' || item.writers.includes(writer))
-  })
+function getRandomEpisode(lead, writer) {
+  var includes = EpisodeDetails.filter(item => {
+    return (lead === 'All' || item.lead.includes(lead)) &&
+      (writer === 'All' || item.writers.includes(writer));
+  });
 
   var item = includes[Math.floor(Math.random() * includes.length)];
 
   return getEpisodeDetails(item.season, item.episode);
 }
 
+function getRandomEpisodeFromSeason(season) {
+  var items = EpisodeDetails.filter(item => {
+    return item.season === season;
+  });
+
+  var item = items[Math.floor(Math.random() * items.length)];
+
+  return getEpisodeDetails(season, item.episode);
+}
+
 //------------------------------------------------------------------------------
 // Main component
 class Main extends Component {
-  constructor() {
-    super();
-    // Select random episode to start
-    this.state = {
-      "episode": getRandomEpisode('All', 'All')
-    };
+  constructor(props) {
+    super(props);
+
+    if (props.season) var season = Number(props.season);
+    if (props.episode) var episode = Number(props.episode);
+
+    if (season && episode) {
+      // If a specific episode is given, set it now
+      this.state = {
+        episode: getEpisodeDetails(season, episode)
+      };
+    } else if (season) {
+      // Select random episode from season
+      this.state = {
+        episode: getRandomEpisodeFromSeason(season)
+      };
+    } else {
+      // Select random episode to start
+      this.state = {
+        episode: getRandomEpisode('All', 'All')
+      };
+    }
 
     // Collect show information
     this.episodes = getAllEpisodes();
@@ -132,19 +162,19 @@ class Main extends Component {
   }
 
   handlePreviousClick() {
-    this.setState({"episode": getPreviousEpisode(this.state.episode)});
+    this.setState({ episode: getPreviousEpisode(this.state.episode) });
   }
 
   handleNextClick() {
-    this.setState({"episode": getNextEpisode(this.state.episode)});
+    this.setState({ episode: getNextEpisode(this.state.episode) });
   }
 
   handleApplyClick(filters) {
-    this.setState({"episode": getRandomEpisode(filters.lead, filters.writer)});
+    this.setState({ episode: getRandomEpisode(filters.lead, filters.writer) });
   }
 
   handleSearchSelection(episode) {
-    this.setState({"episode": episode});
+    this.setState({ episode: episode });
   }
 
   render() {
@@ -157,9 +187,7 @@ class Main extends Component {
           writers={this.writers}
           getWriters={getWriters}
         />
-        <Episode
-          episode={this.state.episode}
-        />
+        <Episode episode={this.state.episode} />
         <Search
           episodes={this.episodes}
           onSelect={this.handleSearchSelection}
