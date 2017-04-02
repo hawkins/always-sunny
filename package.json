@@ -58,7 +58,8 @@
   "dependencies": {
     "react": "^15.4.1",
     "react-autosuggest": "^7.0.1",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "react-router-dom": "^4.0.0"
   },
   "scripts": {
     "start": "node scripts/start.js",
