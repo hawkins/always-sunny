@@ -23,22 +23,22 @@ class Controls extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      'lead': 'All',
-      'writer': 'All',
-      'suggestions': [],
-      'search': ''
+      lead: 'All',
+      writer: 'All',
+      suggestions: [],
+      search: ''
     };
 
     this.writers = [];
 
     // Needs .value property because of Dropdown
     this.characters = [
-      {value: 'All'},
-      {value: 'Charlie'},
-      {value: 'Dee'},
-      {value: 'Dennis'},
-      {value: 'Frank'},
-      {value: 'Mac'}
+      { value: 'All' },
+      { value: 'Charlie' },
+      { value: 'Dee' },
+      { value: 'Dennis' },
+      { value: 'Frank' },
+      { value: 'Mac' }
     ];
 
     this.updateWriters = this.updateWriters.bind(this);
@@ -52,11 +52,11 @@ class Controls extends Component {
     this.updateWriters(this.state.lead);
   }
 
-  updateWriters (lead) {
+  updateWriters(lead) {
     this.writers = this.props.getWriters(lead);
   }
 
-  renderLead (item) {
+  renderLead(item) {
     return (
       <div style={containerStyle}>
         <div style={contentStyle} className="item">
@@ -66,7 +66,7 @@ class Controls extends Component {
     );
   }
 
-  renderWriter (item) {
+  renderWriter(item) {
     return (
       <div style={containerStyle}>
         <div style={contentStyle} className="item">
@@ -86,19 +86,22 @@ class Controls extends Component {
   }
 
   onApplyClick() {
-    this.props.onApplyClick({'lead': this.state.lead, 'writer': this.state.writer});
+    this.props.onApplyClick({
+      lead: this.state.lead,
+      writer: this.state.writer
+    });
   }
 
   onLeadChange(value) {
     this.updateWriters(value);
     this.setState({
-      'lead': value
+      lead: value
     });
   }
 
   onWriterChange(value) {
     this.setState({
-      'writer': value
+      writer: value
     });
   }
 
@@ -106,7 +109,7 @@ class Controls extends Component {
     return (
       <div className="controls">
         <label>Filter</label>
-        <br/>
+        <br />
         <label>Filter by lead character</label>
         <Dropdown
           auto
@@ -125,11 +128,17 @@ class Controls extends Component {
           template={this.renderWriter}
         />
 
-        <Button raised primary ripple onClick={this.onApplyClick}>Apply filters</Button>
-        <br/>
-        <Button flat primary ripple onClick={this.onPreviousClick}>Previous episode</Button>
-        <br/>
-        <Button flat primary ripple onClick={this.onNextClick}>Next episode</Button>
+        <Button raised primary ripple onClick={this.onApplyClick}>
+          Apply filters
+        </Button>
+        <br />
+        <Button flat primary ripple onClick={this.onPreviousClick}>
+          Previous episode
+        </Button>
+        <br />
+        <Button flat primary ripple onClick={this.onNextClick}>
+          Next episode
+        </Button>
       </div>
     );
   }

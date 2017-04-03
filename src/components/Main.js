@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import Episode from './Episode.js';
-import Controls from './Controls.js';
-import Search from './Search.js';
+import Episode from './Episode';
+import Controls from './Controls';
+import Search from './Search';
 
 // Data
-import EpisodeDetails from '../data/EpisodeDetails.js';
-import Sunny from '../data/Sunny.js';
+import EpisodeDetails from '../data/EpisodeDetails';
+import Sunny from '../data/Sunny';
 
 //------------------------------------------------------------------------------
 // Helper functions to manage data
@@ -64,10 +64,12 @@ function getEpisodeDetails(s, ep) {
 
   // Attach info from Sunny
   const SunnyInfo = Sunny.video.seasons[s - 1].episodes[ep - 1];
-  details.title = SunnyInfo.title;
-  details.description = SunnyInfo.synopsis;
-  details.link = 'https://www.netflix.com/watch/' + SunnyInfo.episodeId;
-  return details;
+  if (SunnyInfo) {
+    details.title = SunnyInfo.title;
+    details.description = SunnyInfo.synopsis;
+    details.link = 'https://www.netflix.com/watch/' + SunnyInfo.episodeId;
+    return details;
+  }
 }
 
 function getPreviousEpisode(episode) {
@@ -149,6 +151,11 @@ class Main extends Component {
       this.state = {
         episode: getRandomEpisode('All', 'All')
       };
+    }
+
+    if (this.state.episode === undefined) {
+      // Select random episode
+      this.state.episode = getRandomEpisode('All', 'All');
     }
 
     // Collect show information
