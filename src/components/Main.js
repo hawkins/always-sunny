@@ -10,12 +10,15 @@ import Sunny from '../data/Sunny';
 
 //------------------------------------------------------------------------------
 // Helper functions to manage data
-function getWriters(lead) {
+function getWriters(lead, season) {
   var list = [{ value: 'All', count: 0 }];
 
   for (var i = 0; i < EpisodeDetails.length; i++) {
-    // Only consider episodes with our lead character prominent
-    if (lead === 'All' || EpisodeDetails[i].lead.includes(lead)) {
+    // Only consider episodes in correct season and with our lead character prominent
+    if (
+      (season === 'All' || EpisodeDetails[i].season === season) &&
+      (lead === 'All' || EpisodeDetails[i].lead.includes(lead))
+    ) {
       // Increment 'All' count
       list[0].count++;
 
@@ -106,10 +109,11 @@ function getNextEpisode(episode) {
   }
 }
 
-function getRandomEpisode(lead, writer) {
+function getRandomEpisode(lead, writer, season) {
   var includes = EpisodeDetails.filter(item => {
     return (lead === 'All' || item.lead.includes(lead)) &&
-      (writer === 'All' || item.writers.includes(writer));
+      (writer === 'All' || item.writers.includes(writer)) &&
+      (season === 'All' || item.season === season);
   });
 
   var item = includes[Math.floor(Math.random() * includes.length)];
@@ -149,13 +153,13 @@ class Main extends Component {
     } else {
       // Select random episode to start
       this.state = {
-        episode: getRandomEpisode('All', 'All')
+        episode: getRandomEpisode('All', 'All', 'All')
       };
     }
 
     if (this.state.episode === undefined) {
       // Select random episode
-      this.state.episode = getRandomEpisode('All', 'All');
+      this.state.episode = getRandomEpisode('All', 'All', 'All');
     }
 
     // Collect show information
@@ -177,7 +181,10 @@ class Main extends Component {
   }
 
   handleApplyClick(filters) {
-    this.setState({ episode: getRandomEpisode(filters.lead, filters.writer) });
+    console.log(filters);
+    this.setState({
+      episode: getRandomEpisode(filters.lead, filters.writer, filters.season)
+    });
   }
 
   handleSearchSelection(episode) {
