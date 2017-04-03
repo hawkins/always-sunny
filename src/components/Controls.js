@@ -25,6 +25,7 @@ class Controls extends Component {
     this.state = {
       lead: 'All',
       writer: 'All',
+      season: 'All',
       suggestions: [],
       search: ''
     };
@@ -41,19 +42,35 @@ class Controls extends Component {
       { value: 'Mac' }
     ];
 
+    this.seasons = [
+      { value: 'All' },
+      { value: 1 },
+      { value: 2 },
+      { value: 3 },
+      { value: 4 },
+      { value: 5 },
+      { value: 6 },
+      { value: 7 },
+      { value: 8 },
+      { value: 9 },
+      { value: 10 },
+      { value: 11 }
+    ];
+
     this.updateWriters = this.updateWriters.bind(this);
     this.onApplyClick = this.onApplyClick.bind(this);
     this.onLeadChange = this.onLeadChange.bind(this);
     this.onWriterChange = this.onWriterChange.bind(this);
+    this.onSeasonChange = this.onSeasonChange.bind(this);
     this.onPreviousClick = this.onPreviousClick.bind(this);
     this.onNextClick = this.onNextClick.bind(this);
 
     // Go ahead and get writers to start
-    this.updateWriters(this.state.lead);
+    this.updateWriters(this.state.lead, this.state.season);
   }
 
-  updateWriters(lead) {
-    this.writers = this.props.getWriters(lead);
+  updateWriters(lead, season) {
+    this.writers = this.props.getWriters(lead, season);
   }
 
   renderLead(item) {
@@ -77,6 +94,16 @@ class Controls extends Component {
     );
   }
 
+  renderSeason(item) {
+    return (
+      <div style={containerStyle}>
+        <div style={contentStyle} className="item">
+          <strong>{item.value}</strong>
+        </div>
+      </div>
+    );
+  }
+
   onPreviousClick() {
     this.props.onPreviousClick();
   }
@@ -88,12 +115,13 @@ class Controls extends Component {
   onApplyClick() {
     this.props.onApplyClick({
       lead: this.state.lead,
-      writer: this.state.writer
+      writer: this.state.writer,
+      season: this.state.season
     });
   }
 
   onLeadChange(value) {
-    this.updateWriters(value);
+    this.updateWriters(value, this.state.season);
     this.setState({
       lead: value
     });
@@ -102,6 +130,13 @@ class Controls extends Component {
   onWriterChange(value) {
     this.setState({
       writer: value
+    });
+  }
+
+  onSeasonChange(value) {
+    this.updateWriters(this.state.lead, value);
+    this.setState({
+      season: value
     });
   }
 
@@ -126,6 +161,15 @@ class Controls extends Component {
           source={this.writers}
           value={this.state.writer}
           template={this.renderWriter}
+        />
+
+        <label>Filter by season</label>
+        <Dropdown
+          auto
+          onChange={this.onSeasonChange}
+          source={this.seasons}
+          value={this.state.season}
+          template={this.renderSeason}
         />
 
         <Button raised primary ripple onClick={this.onApplyClick}>
