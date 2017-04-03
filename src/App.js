@@ -7,7 +7,7 @@ import './index.css';
 import 'react-toolbox/lib/commons.scss';
 
 const Child = ({ match }) => (
-  <Main season={match.params.season} episode={match.params.episode}/>
+  <Main season={match.params.season} episode={match.params.episode} />
 );
 
 export default () => (
