@@ -1,23 +1,22 @@
-import React, { Component } from 'react';
-
-import Episode from './Episode';
-import Controls from './Controls';
-import Search from './Search';
+import React from "react";
+import Episode from "./Episode";
+import Controls from "./Controls";
+import Search from "./Search";
 
 // Data
-import EpisodeDetails from '../data/EpisodeDetails';
-import Sunny from '../data/Sunny';
+import EpisodeDetails from "../data/EpisodeDetails";
+import Sunny from "../data/Sunny";
 
 //------------------------------------------------------------------------------
 // Helper functions to manage data
 function getWriters(lead, season) {
-  var list = [{ value: 'All', count: 0 }];
+  var list = [{ value: "All", count: 0 }];
 
   for (var i = 0; i < EpisodeDetails.length; i++) {
     // Only consider episodes in correct season and with our lead character prominent
     if (
-      (season === 'All' || EpisodeDetails[i].season === season) &&
-      (lead === 'All' || EpisodeDetails[i].lead.includes(lead))
+      (season === "All" || EpisodeDetails[i].season === season) &&
+      (lead === "All" || EpisodeDetails[i].lead.includes(lead))
     ) {
       // Increment 'All' count
       list[0].count++;
@@ -58,7 +57,7 @@ function getAllEpisodes() {
 }
 
 function getEpisodeDetails(s, ep) {
-  var details = {};
+  let details = {};
   for (var i = 0; i < EpisodeDetails.length; i++) {
     if (s === EpisodeDetails[i].season && ep === EpisodeDetails[i].episode) {
       details = EpisodeDetails[i];
@@ -66,13 +65,12 @@ function getEpisodeDetails(s, ep) {
   }
 
   // Attach info from Sunny
-  const SunnyInfo = Sunny.video.seasons[s - 1].episodes[ep - 1];
-  if (SunnyInfo) {
-    details.title = SunnyInfo.title;
-    details.description = SunnyInfo.synopsis;
-    details.link = 'https://www.netflix.com/watch/' + SunnyInfo.episodeId;
-    return details;
-  }
+  const SunnyInfo = Sunny[s - 1].episodes[ep - 1];
+  details.title = SunnyInfo.title;
+  details.description = SunnyInfo.synopsis;
+  details.link = "https://www.netflix.com/watch/" + SunnyInfo.episodeId;
+
+  return details;
 }
 
 function getPreviousEpisode(episode) {
@@ -111,9 +109,11 @@ function getNextEpisode(episode) {
 
 function getRandomEpisode(lead, writer, season) {
   var includes = EpisodeDetails.filter(item => {
-    return (lead === 'All' || item.lead.includes(lead)) &&
-      (writer === 'All' || item.writers.includes(writer)) &&
-      (season === 'All' || item.season === season);
+    return (
+      (lead === "All" || item.lead.includes(lead)) &&
+      (writer === "All" || item.writers.includes(writer)) &&
+      (season === "All" || item.season === season)
+    );
   });
 
   var item = includes[Math.floor(Math.random() * includes.length)];
@@ -133,7 +133,7 @@ function getRandomEpisodeFromSeason(season) {
 
 //------------------------------------------------------------------------------
 // Main component
-class Main extends Component {
+export default class Main extends React.Component {
   constructor(props) {
     super(props);
 
@@ -153,13 +153,13 @@ class Main extends Component {
     } else {
       // Select random episode to start
       this.state = {
-        episode: getRandomEpisode('All', 'All', 'All')
+        episode: getRandomEpisode("All", "All", "All")
       };
     }
 
     if (this.state.episode === undefined) {
       // Select random episode
-      this.state.episode = getRandomEpisode('All', 'All', 'All');
+      this.state.episode = getRandomEpisode("All", "All", "All");
     }
 
     // Collect show information
@@ -210,5 +210,3 @@ class Main extends Component {
     );
   }
 }
-
-export default Main;

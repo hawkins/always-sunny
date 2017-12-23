@@ -1,101 +1,110 @@
-import React, { Component } from 'react';
+import React from "react";
+import Autosuggest from "react-autosuggest";
 
-import Autosuggest from 'react-autosuggest';
-
-function commaSeparatedItems (item, index) {
+function commaSeparatedItems(item, index) {
   if (index === 0) {
-    return (
-      <span key={item}>{item}</span>
-    );
+    return <span key={item}>{item}</span>;
   } else {
-    return (
-      <span key={item}>, {item}</span>
-    );
+    return <span key={item}>, {item}</span>;
   }
 }
 
 //------------------------------------------------------------------------------
 // Styles
 const containerStyle = {
-  display: 'flex',
-  flexDirection: 'column'
+  display: "flex",
+  flexDirection: "column"
 };
 
 const contentStyle = {
-  fontSize: '1.4rem',
-  display: 'flex',
-  flexDirection: 'column',
+  fontSize: "1.4rem",
+  display: "flex",
+  flexDirection: "column",
   flexGrow: 2
 };
 
 //------------------------------------------------------------------------------
 // Autosuggest functions
-const renderSuggestion = (suggestion) => {
+const renderSuggestion = suggestion => {
   return (
     <div style={containerStyle}>
       <div style={contentStyle} className="item">
         <strong>{suggestion.title}</strong>
-        <span>S{suggestion.season}:E{suggestion.episode}</span>
+        <span>
+          S{suggestion.season}:E{suggestion.episode}
+        </span>
         <span>Lead: {suggestion.lead.map(commaSeparatedItems)}</span>
       </div>
-      <br/>
+      <br />
     </div>
   );
-}
+};
 const shouldRenderSuggestions = value => value.trim().length > 2;
 const getSuggestionValue = suggestion => suggestion;
 
 //------------------------------------------------------------------------------
 // Component
-class Search extends Component {
+class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      'suggestions': [],
-      'search': ''
+      suggestions: [],
+      search: ""
     };
 
     this.getSuggestions = this.getSuggestions.bind(this);
     this.onSearchChange = this.onSearchChange.bind(this);
-    this.onSuggestionsFetchRequested = this.onSuggestionsFetchRequested.bind(this);
-    this.onSuggestionsClearRequested = this.onSuggestionsClearRequested.bind(this);
+    this.onSuggestionsFetchRequested = this.onSuggestionsFetchRequested.bind(
+      this
+    );
+    this.onSuggestionsClearRequested = this.onSuggestionsClearRequested.bind(
+      this
+    );
     this.onSuggestionSelected = this.onSuggestionSelected.bind(this);
   }
 
   getSuggestions(value) {
     const inputValue = value.trim().toLowerCase();
     const inputLength = inputValue.length;
-    return inputLength === 0 ? [] : this.props.episodes.filter(episode =>
-      (episode.title.toLowerCase().indexOf(inputValue) !== -1
-        || episode.description.toLowerCase().indexOf(inputValue) !== -1
-        || (episode.guest
-            && episode.guest.join(',').toLowerCase().indexOf(inputValue) !== -1)
-      )
-    );
+    return inputLength === 0
+      ? []
+      : this.props.episodes.filter(
+          episode =>
+            episode.title.toLowerCase().indexOf(inputValue) !== -1 ||
+            episode.description.toLowerCase().indexOf(inputValue) !== -1 ||
+            (episode.guest &&
+              episode.guest
+                .join(",")
+                .toLowerCase()
+                .indexOf(inputValue) !== -1)
+        );
   }
 
   onSearchChange(event, { newValue }) {
     this.setState({
-      'search': newValue
+      search: newValue
     });
-  };
+  }
 
   onSuggestionsFetchRequested({ value }) {
     this.setState({
       suggestions: this.getSuggestions(value)
     });
-  };
+  }
 
   onSuggestionsClearRequested() {
     this.setState({
       suggestions: []
     });
-  };
+  }
 
-  onSuggestionSelected(event, { suggestion, suggestionValue, sectionIndex, method }) {
+  onSuggestionSelected(
+    event,
+    { suggestion, suggestionValue, sectionIndex, method }
+  ) {
     this.setState({
       episode: suggestion,
-      search: ''
+      search: ""
     });
 
     // Now set it globally
@@ -116,9 +125,10 @@ class Search extends Component {
           shouldRenderSuggestions={shouldRenderSuggestions}
           inputProps={{
             autoFocus: true,
-            placeholder: 'Start typing',
+            placeholder: "Start typing",
             value: this.state.search,
-            onChange: this.onSearchChange}}
+            onChange: this.onSearchChange
+          }}
         />
       </div>
     );

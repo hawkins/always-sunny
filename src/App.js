@@ -1,13 +1,13 @@
-import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import TitleBar from './components/TitleBar';
-import Main from './components/Main';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import TitleBar from "./components/TitleBar";
+import Main from "./components/Main";
 
-import './index.css';
-import 'react-toolbox/lib/commons.scss';
+import "./index.css";
+import "react-toolbox/lib/commons.scss";
 
-const Child = ({ match }) => (
-  <Main season={match.params.season} episode={match.params.episode} />
+const Child = ({ match: { params: { season, episode } } }) => (
+  <Main season={season} episode={episode} />
 );
 
 export default () => (
