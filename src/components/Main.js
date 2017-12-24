@@ -1,4 +1,5 @@
-import React from "react";
+import React, { PropTypes } from "react";
+import { withRouter } from "react-router-dom";
 import Episode from "./Episode";
 import Controls from "./Controls";
 import Search from "./Search";
@@ -94,28 +95,29 @@ function getRandomEpisodeFromSeason(season) {
 
 //------------------------------------------------------------------------------
 // Main component
-export default class Main extends React.Component {
+class Main extends React.PureComponent {
+  static propTypes = {
+    location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
+  };
+
   constructor(props) {
     super(props);
 
-    if (props.season) var season = Number(props.season);
-    if (props.episode) var episode = Number(props.episode);
-
     // Select random episode to start
-    this.state = {
-      episode: getRandomEpisode("All", "All", "All")
-    };
+    this.state = getRandomEpisode("All", "All", "All");
 
-    if (season && episode) {
+    if (props.season && props.episode) {
       // If a specific episode is given, set it now
-      this.setState({
-        episode: getEpisodeDetails(season, episode)
-      });
-    } else if (season) {
+      this.state = getEpisodeDetails(
+        Number(props.season),
+        Number(props.episode)
+      );
+    } else if (props.season) {
       // Select random episode from season
-      this.setState({
-        episode: getRandomEpisodeFromSeason(season)
-      });
+      this.state = getRandomEpisodeFromSeason(Number(props.season));
+    } else {
+      this.state = getRandomEpisode("All", "All", "All");
     }
 
     // Bind control methods
@@ -125,23 +127,50 @@ export default class Main extends React.Component {
     this.handleSearchSelection = this.handleSearchSelection.bind(this);
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    const { season, episode, history } = this.props;
+    const { episode: currentEpisode, season: currentSeason } = this.state;
+
+    if (season === undefined) return;
+
+    // Only update the history if user originally specified season and or episode
+    if (
+      prevProps.episode !== currentEpisode ||
+      prevProps.season !== currentSeason
+    ) {
+      if (episode !== undefined) {
+        history.push(`/${this.state.season}/${this.state.episode}`);
+      } else {
+        history.push(`/${this.state.season}`);
+      }
+    }
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (
+      nextState.episode !== this.state.episode ||
+      nextState.season !== this.state.season
+    )
+      return true;
+    return false;
+  }
+
   handlePreviousClick() {
-    this.setState({ episode: getPreviousEpisode(this.state.episode) });
+    this.setState(getPreviousEpisode(this.state));
   }
 
   handleNextClick() {
-    this.setState({ episode: getNextEpisode(this.state.episode) });
+    this.setState(getNextEpisode(this.state));
   }
 
   handleApplyClick(filters) {
-    console.log(filters);
-    this.setState({
-      episode: getRandomEpisode(filters.lead, filters.writer, filters.season)
-    });
+    this.setState(
+      getRandomEpisode(filters.lead, filters.writer, filters.season)
+    );
   }
 
   handleSearchSelection(episode) {
-    this.setState({ episode: episode });
+    this.setState(episode);
   }
 
   render() {
@@ -154,9 +183,11 @@ export default class Main extends React.Component {
           writers={this.writers}
           getWriters={getWriters}
         />
-        <Episode episode={this.state.episode} />
+        <Episode episode={this.state} />
         <Search episodes={episodes} onSelect={this.handleSearchSelection} />
       </div>
     );
   }
 }
+
+export default withRouter(Main);

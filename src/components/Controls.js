@@ -1,49 +1,49 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import { Button } from 'react-toolbox/lib/button';
-import Dropdown from 'react-toolbox/lib/dropdown';
+import { Button } from "react-toolbox/lib/button";
+import Dropdown from "react-toolbox/lib/dropdown";
 
 //------------------------------------------------------------------------------
 // Styles
 const containerStyle = {
-  display: 'flex',
-  flexDirection: 'column'
+  display: "flex",
+  flexDirection: "column"
 };
 
 const contentStyle = {
-  fontSize: '1.4rem',
-  display: 'flex',
-  flexDirection: 'column',
+  fontSize: "1.4rem",
+  display: "flex",
+  flexDirection: "column",
   flexGrow: 2
 };
 
 //------------------------------------------------------------------------------
 // Component
-class Controls extends Component {
+export default class Controls extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lead: 'All',
-      writer: 'All',
-      season: 'All',
+      lead: "All",
+      writer: "All",
+      season: "All",
       suggestions: [],
-      search: ''
+      search: ""
     };
 
     this.writers = [];
 
     // Needs .value property because of Dropdown
     this.characters = [
-      { value: 'All' },
-      { value: 'Charlie' },
-      { value: 'Dee' },
-      { value: 'Dennis' },
-      { value: 'Frank' },
-      { value: 'Mac' }
+      { value: "All" },
+      { value: "Charlie" },
+      { value: "Dee" },
+      { value: "Dennis" },
+      { value: "Frank" },
+      { value: "Mac" }
     ];
 
     this.seasons = [
-      { value: 'All' },
+      { value: "All" },
       { value: 1 },
       { value: 2 },
       { value: 3 },
@@ -187,5 +187,3 @@ class Controls extends Component {
     );
   }
 }
-
-export default Controls;
