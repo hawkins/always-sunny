@@ -43,7 +43,7 @@ export default ({ episode }) => (
       href={episode.link}
       style={{ marginBottom: 20, fontSize: "1.4rem" }}
     >
-      Watch Now on Hulu
+      Watch now on Hulu
     </Button>
   </div>
 );

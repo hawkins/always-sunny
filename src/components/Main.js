@@ -125,24 +125,27 @@ class Main extends React.PureComponent {
     this.handleNextClick = this.handleNextClick.bind(this);
     this.handleApplyClick = this.handleApplyClick.bind(this);
     this.handleSearchSelection = this.handleSearchSelection.bind(this);
+    this.updateURL = this.updateURL.bind(this);
   }
 
   componentDidUpdate(prevProps, prevState) {
-    const { season, episode, history } = this.props;
-    const { episode: currentEpisode, season: currentSeason } = this.state;
+    if (this.props.season === undefined) return;
 
-    if (season === undefined) return;
+    const { episode, season } = this.state;
 
     // Only update the history if user originally specified season and or episode
-    if (
-      prevProps.episode !== currentEpisode ||
-      prevProps.season !== currentSeason
-    ) {
-      if (episode !== undefined) {
-        history.push(`/${this.state.season}/${this.state.episode}`);
-      } else {
-        history.push(`/${this.state.season}`);
-      }
+    if (prevProps.episode !== episode || prevProps.season !== season) {
+      this.updateURL();
+    }
+  }
+
+  updateURL() {
+    const { season, episode, history } = this.props;
+
+    if (episode !== undefined) {
+      history.push(`/${this.state.season}/${this.state.episode}`);
+    } else {
+      history.push(`/${this.state.season}`);
     }
   }
 
