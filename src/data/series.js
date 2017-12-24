@@ -13,7 +13,7 @@ module.exports = [
         title: "The Gang Gets Racist",
         description:
           "The guys hire Dee's friend as a promoter for the bar and get more than they bargained for. Charlie seeks black friends to prove he isn't a racist.",
-        link: "https://www.netflix.com/watch/70224484"
+        link: "https://www.hulu.com/watch/6705"
       },
       {
         season: 1,
@@ -25,7 +25,7 @@ module.exports = [
         title: "Charlie Wants an Abortion",
         description:
           "Charlie is skeptical when a girl from his past reveals he is the father of her child, but he finds an unexpected perk in acting as the brat's father.",
-        link: "https://www.netflix.com/watch/70224486"
+        link: "https://www.hulu.com/watch/6704"
       },
       {
         season: 1,
@@ -36,7 +36,7 @@ module.exports = [
         title: "Underage Drinking: A National Concern",
         description:
           "After noting a rise in underage patrons, the gang makes accommodations for the younger crowd and gets caught up in petty school politics and crushes.",
-        link: "https://www.netflix.com/watch/70224489"
+        link: "https://www.hulu.com/watch/6702"
       },
       {
         season: 1,
@@ -48,7 +48,7 @@ module.exports = [
         title: "Charlie Has Cancer",
         description:
           "The gang learns that Charlie might have cancer and hatches a shallow-minded plan to alleviate his anguish. Meanwhile, Mac gets involved with a tranny.",
-        link: "https://www.netflix.com/watch/70224487"
+        link: "https://www.hulu.com/watch/6708"
       },
       {
         season: 1,
@@ -59,7 +59,7 @@ module.exports = [
         title: "Gun Fever",
         description:
           "Upon learning that the bar's safe has been stolen, the guys take matters into their own hands and buy a gun.",
-        link: "https://www.netflix.com/watch/70224488"
+        link: "https://www.hulu.com/watch/6706"
       },
       {
         season: 1,
@@ -71,7 +71,7 @@ module.exports = [
         title: "The Gang Finds a Dead Guy",
         description:
           "Mac and Dennis pretend to be acquainted with a patron found dead in their bar in order to get closer to the dead man's granddaughter.",
-        link: "https://www.netflix.com/watch/70224490"
+        link: "https://www.hulu.com/watch/6707"
       },
       {
         season: 1,
@@ -83,7 +83,7 @@ module.exports = [
         title: "Charlie Got Molested",
         description:
           "The gang learns that Charlie and Mac's high school gym teacher has been accused of molestation, and they worry when Charlie reacts oddly to the news.",
-        link: "https://www.netflix.com/watch/70224485"
+        link: "https://www.hulu.com/watch/6703"
       }
     ],
     shortName: "S1",
@@ -103,7 +103,7 @@ module.exports = [
         title: "Charlie Gets Crippled",
         description:
           "The gang discovers the perks of being handicapped when Charlie becomes wheelchair-bound after an accident. Dennis and Dee's estranged father returns.",
-        link: "https://www.netflix.com/watch/70224491"
+        link: "https://www.hulu.com/watch/25438"
       },
       {
         season: 2,
@@ -115,7 +115,7 @@ module.exports = [
         title: "The Gang Goes Jihad",
         description:
           "The gang discovers they may lose part of the bar due to a zoning mishap and use unorthodox measures to remedy the situation.",
-        link: "https://www.netflix.com/watch/70224492"
+        link: "https://www.hulu.com/watch/25439"
       },
       {
         season: 2,
@@ -126,7 +126,7 @@ module.exports = [
         title: "Dennis and Dee Go on Welfare",
         description:
           "Dennis and Dee quit their jobs and concoct a plan to get welfare benefits so they can pursue their real, and completely unrealistic, dreams and goals.",
-        link: "https://www.netflix.com/watch/70224494"
+        link: "https://www.hulu.com/watch/25440"
       },
       {
         season: 2,
@@ -138,7 +138,7 @@ module.exports = [
         title: "Mac Bangs Dennis' Mom",
         description:
           "Jealous of Frank's newfound happiness reconnecting with his kids and reliving his youth, Barbara gets back at Frank by having sex with Mac.",
-        link: "https://www.netflix.com/watch/70224493"
+        link: "https://www.hulu.com/watch/25442"
       },
       {
         season: 2,
@@ -149,7 +149,7 @@ module.exports = [
         title: "Hundred Dollar Baby",
         description:
           "After getting mugged, Dee agrees to take boxing lessons from Frank. Meanwhile, Mac and Dennis enter Charlie in an underground street fight.",
-        link: "https://www.netflix.com/watch/70224497"
+        link: "https://www.hulu.com/watch/25444"
       },
       {
         season: 2,
@@ -161,7 +161,7 @@ module.exports = [
         title: "The Gang Gives Back",
         description:
           "After being arrested for arson, the gang is sentenced to community service. Charlie is ordered to attend AA, where he makes a startling discovery.",
-        link: "https://www.netflix.com/watch/70224495"
+        link: "https://www.hulu.com/watch/25441"
       },
       {
         season: 2,
@@ -173,7 +173,7 @@ module.exports = [
         title: "The Gang Exploits a Miracle",
         description:
           'When a leaky pipe creates a water stain on the wall that resembles the Virgin Mary\'s likeness, the gang argues over how to exploit the "miracle."',
-        link: "https://www.netflix.com/watch/70224499"
+        link: "https://www.hulu.com/watch/25447"
       },
       {
         season: 2,
@@ -184,7 +184,7 @@ module.exports = [
         title: "The Gang Runs for Office",
         description:
           "The gang explores corrupt local politics, but their initial pursuit of a quick cash pay-off soon falls to the wayside when Dennis runs for office.",
-        link: "https://www.netflix.com/watch/70224496"
+        link: "https://www.hulu.com/watch/25443"
       },
       {
         season: 2,
@@ -196,7 +196,7 @@ module.exports = [
         title: "Charlie Goes America All Over Everybody's Ass",
         description:
           "While the gang debates the constitutionality of various bans on people's rights, Mac and Dennis turn Paddy's into a \"freedom zone\" with no rules.",
-        link: "https://www.netflix.com/watch/70224498"
+        link: "https://www.hulu.com/watch/25446"
       },
       {
         season: 2,
@@ -213,7 +213,7 @@ module.exports = [
         title: "Dennis and Dee Get a New Dad",
         description:
           "Dee is concerned when she receives numerous emails on her MySpace page from a stranger claiming to be her and Dennis's father.",
-        link: "https://www.netflix.com/watch/70224500"
+        link: "https://www.hulu.com/watch/25445"
       }
     ],
     shortName: "S2",
@@ -234,7 +234,7 @@ module.exports = [
         title: "The Gang Finds a Dumpster Baby",
         description:
           "Dennis joins an environmentalist group, but he's snubbed by the activists. Dee and Mac decide to raise a baby they find in a dumpster.",
-        link: "https://www.netflix.com/watch/70224501"
+        link: "https://www.hulu.com/watch/4920"
       },
       {
         season: 3,
@@ -246,7 +246,7 @@ module.exports = [
         title: "The Gang Gets Invincible",
         description:
           "When the Philadelphia Eagles hold open tryouts, Mac, Dennis and Dee use the event for their own personal competition. Frank and Charlie tailgate.",
-        link: "https://www.netflix.com/watch/70224502"
+        link: "https://www.hulu.com/watch/4910"
       },
       {
         season: 3,
@@ -258,7 +258,7 @@ module.exports = [
         title: "Dennis and Dee's Mom Is Dead",
         description:
           "Frank and Dee are left out of Barbara's will. For Dennis, the thrill of inheriting his mom's mansion is tempered by the realization he has no friends.",
-        link: "https://www.netflix.com/watch/70224503"
+        link: "https://www.hulu.com/watch/4893"
       },
       {
         season: 3,
@@ -270,7 +270,7 @@ module.exports = [
         title: "The Gang Gets Held Hostage",
         description:
           "The McPoyle brothers and sister Margaret take the gang hostage at Paddy's, raising the stakes to a new level in the feud between the two groups.",
-        link: "https://www.netflix.com/watch/70224504"
+        link: "https://www.hulu.com/watch/4908"
       },
       {
         season: 3,
@@ -281,7 +281,7 @@ module.exports = [
         title: "The Aluminum Monster vs. Fatty Magoo",
         description:
           "Dee discovers that the biggest loser and fatty from high school is now a successful and thin fashion designer ... now making Dee the biggest loser.",
-        link: "https://www.netflix.com/watch/70224505"
+        link: "https://www.hulu.com/watch/4892"
       },
       {
         season: 3,
@@ -292,7 +292,7 @@ module.exports = [
         title: "The Gang Solves the North Korea Situation",
         description:
           "The gang declares war against a Korean restaurateur who threatens to bump Paddy's from the city's annual pub crawl.",
-        link: "https://www.netflix.com/watch/70224506"
+        link: "https://www.hulu.com/watch/4925"
       },
       {
         season: 3,
@@ -304,7 +304,7 @@ module.exports = [
         title: "The Gang Sells Out",
         description:
           "The gang agrees to sell Paddy's when they get an offer that's too good to refuse. As non-partners in the bar, Dee and Charlie are left in the lurch.",
-        link: "https://www.netflix.com/watch/70224507"
+        link: "https://www.hulu.com/watch/4901"
       },
       {
         season: 3,
@@ -315,7 +315,7 @@ module.exports = [
         title: "Frank Sets Sweet Dee On Fire",
         description:
           "The gang tries to become local celebrities by creating their own public access news show and making it big on the hip club scene.",
-        link: "https://www.netflix.com/watch/70224508"
+        link: "https://www.hulu.com/watch/4916"
       },
       {
         season: 3,
@@ -326,7 +326,7 @@ module.exports = [
         title: "Sweet Dee's Dating a Retarded Person",
         description:
           "Dee may finally find true love when she dates a famous local rapper, who may or may not be mentally retarded.",
-        link: "https://www.netflix.com/watch/70224509"
+        link: "https://www.hulu.com/watch/4912"
       },
       {
         season: 3,
@@ -338,7 +338,7 @@ module.exports = [
         title: "Mac Is a Serial Killer",
         description:
           "Mac's behavior leads Frank, Dennis and Dee to suspect he's a killer. Charlie uses the legal knowledge he's learned from TV to prove Mac's innocence.",
-        link: "https://www.netflix.com/watch/70224510"
+        link: "https://www.hulu.com/watch/4921"
       },
       {
         season: 3,
@@ -350,7 +350,7 @@ module.exports = [
         title: "Dennis Looks Like a Registered Sex Offender",
         description:
           "Dennis is mistaken for a recently released child molester but is more upset that he's being mistaken for a fat person than a sex offender.",
-        link: "https://www.netflix.com/watch/70224511"
+        link: "https://www.hulu.com/watch/2039"
       },
       {
         season: 3,
@@ -361,7 +361,7 @@ module.exports = [
         title: "The Gang Gets Whacked: Part 1",
         description:
           "When the gang find themselves in debt to the mob after a misunderstanding, Dennis is forced to pimp himself as a male escort. Part 1 of 2.",
-        link: "https://www.netflix.com/watch/70224512"
+        link: "https://www.hulu.com/watch/2203"
       },
       {
         season: 3,
@@ -373,7 +373,7 @@ module.exports = [
         title: "The Gang Gets Whacked: Part 2",
         description:
           "When the gang find themselves in debt to the mob after a misunderstanding, Dennis is forced to pimp himself as a male escort. Part 2 of 2.",
-        link: "https://www.netflix.com/watch/70224513"
+        link: "https://www.hulu.com/watch/2202"
       },
       {
         season: 3,
@@ -384,7 +384,7 @@ module.exports = [
         title: "Bums: Making a Mess All Over the City",
         description:
           "To rid the neighborhood of undesirables, Mac and Dee become vigilantes, while Frank and Dennis impersonate police officers.",
-        link: "https://www.netflix.com/watch/70224514"
+        link: "https://www.hulu.com/watch/2445"
       },
       {
         season: 3,
@@ -396,7 +396,7 @@ module.exports = [
         title: "The Gang Dances Their Asses Off",
         description:
           "Charlie inadvertently puts Paddy's up as the grand prize in a dance marathon, and the gang is forced to enter the competition to save their bar.",
-        link: "https://www.netflix.com/watch/70224515"
+        link: "https://www.hulu.com/watch/2768"
       }
     ],
     shortName: "S3",
@@ -417,7 +417,7 @@ module.exports = [
         title: "Mac and Dennis: Manhunters",
         description:
           "After mistakenly eating human meat, Dee and Charlie develop an insatiable cannibalistic hunger. Meanwhile, Mac and Dennis hunt Rickety Cricket.",
-        link: "https://www.netflix.com/watch/70224516"
+        link: "https://www.hulu.com/watch/35353"
       },
       {
         season: 4,
@@ -428,7 +428,7 @@ module.exports = [
         title: "The Gang Solves the Gas Crisis",
         description:
           "Mac, Dennis and Charlie take advantage of rising gas prices by investing in barrels of gasoline and selling them door to door.",
-        link: "https://www.netflix.com/watch/70224517"
+        link: "https://www.hulu.com/watch/35354"
       },
       {
         season: 4,
@@ -440,7 +440,7 @@ module.exports = [
         title: "America's Next Top Paddy's Billboard Model Contest",
         description:
           "After investing in a billboard, Frank and Mac judge a competition to find Paddy's next top model. Dennis competes.",
-        link: "https://www.netflix.com/watch/70224518"
+        link: "https://www.hulu.com/watch/36777"
       },
       {
         season: 4,
@@ -451,7 +451,7 @@ module.exports = [
         title: "Mac's Banging the Waitress",
         description:
           "Charlie asks Mac, his best friend, to beat up the waitress's new boyfriend. The only problem is that Mac is that guy.",
-        link: "https://www.netflix.com/watch/70224519"
+        link: "https://www.hulu.com/watch/36732"
       },
       {
         season: 4,
@@ -463,7 +463,7 @@ module.exports = [
         title: "Mac and Charlie Die: Part 1",
         description:
           "After Mac's father is released from prison, Mac and Charlie stage their own deaths to save their lives. Part 1 of 2.",
-        link: "https://www.netflix.com/watch/70224520"
+        link: "https://www.hulu.com/watch/37659"
       },
       {
         season: 4,
@@ -475,7 +475,7 @@ module.exports = [
         title: "Mac and Charlie Die: Part 2",
         description:
           "After Mac and Charlie stage their own deaths, Frank, Dee and Dennis find unique ways of dealing with the loss. Part 2 of 2.",
-        link: "https://www.netflix.com/watch/70224521"
+        link: "https://www.hulu.com/watch/37660"
       },
       {
         season: 4,
@@ -487,7 +487,7 @@ module.exports = [
         title: "Who Pooped the Bed?",
         description:
           "Frank and Charlie find someone has pooped in their bed, leading Mac and Dennis to join them as they attempt to find the culprit.",
-        link: "https://www.netflix.com/watch/70224522"
+        link: "https://www.hulu.com/watch/39106"
       },
       {
         season: 4,
@@ -498,7 +498,7 @@ module.exports = [
         title: "Paddy's Pub: The Worst Bar in Philadelphia",
         description:
           'When a reporter writes a review naming Paddy\'s "the worst bar in Philadelphia," the gang kidnaps the man to try to change his mind.',
-        link: "https://www.netflix.com/watch/70224523"
+        link: "https://www.hulu.com/watch/39624"
       },
       {
         season: 4,
@@ -510,7 +510,7 @@ module.exports = [
         title: "Dennis Reynolds: An Erotic Life",
         description:
           "After finding Dennis's erotic memoir, Mac and Frank attempt to profit from the masterpiece. Dee and Charlie spend a day in each other's shoes.",
-        link: "https://www.netflix.com/watch/70224524"
+        link: "https://www.hulu.com/watch/40673"
       },
       {
         season: 4,
@@ -521,7 +521,7 @@ module.exports = [
         title: "Sweet Dee Has a Heart Attack",
         description:
           "After Dee suffers a heart attack, she and Dennis try a healthier lifestyle. Charlie and Mac join the corporate work force to get health insurance.",
-        link: "https://www.netflix.com/watch/70224526"
+        link: "https://www.hulu.com/watch/41728"
       },
       {
         season: 4,
@@ -533,7 +533,7 @@ module.exports = [
         title: "The Gang Cracks the Liberty Bell",
         description:
           "To make their bar a local landmark, the gang tells the Philadelphia Historical Society how Paddy's Pub was responsible for cracking the Liberty Bell.",
-        link: "https://www.netflix.com/watch/70224527"
+        link: "https://www.hulu.com/watch/43141"
       },
       {
         season: 4,
@@ -544,7 +544,7 @@ module.exports = [
         title: "The Gang Gets Extreme: Home Makeover Edition",
         description:
           "In an attempt to make their own dreams come true, the gang decides to pay it forward and give one unlucky family an extreme home makeover.",
-        link: "https://www.netflix.com/watch/70224528"
+        link: "https://www.hulu.com/watch/44243"
       },
       {
         season: 4,
@@ -556,7 +556,7 @@ module.exports = [
         title: "The Nightman Cometh",
         description:
           'Charlie, with the help of the rest of the gang, stages a rock opera based on his song "Nightman."',
-        link: "https://www.netflix.com/watch/70224529"
+        link: "https://www.hulu.com/watch/45644"
       }
     ],
     shortName: "S4",
@@ -577,7 +577,7 @@ module.exports = [
         title: "The Gang Exploits the Mortgage Crisis",
         description:
           "While Frank, Mac and Dennis try their hand at real estate, Dee arranges to be a surrogate mother to a wealthy couple with a sweet house.",
-        link: "https://www.netflix.com/watch/70224530"
+        link: "https://www.hulu.com/watch/97550"
       },
       {
         season: 5,
@@ -588,7 +588,7 @@ module.exports = [
         title: "The Gang Hits the Road",
         description:
           "The gang attempts to expand their horizons by taking a road trip to the Grand Canyon.",
-        link: "https://www.netflix.com/watch/70224531"
+        link: "https://www.hulu.com/watch/98789"
       },
       {
         season: 5,
@@ -600,7 +600,7 @@ module.exports = [
         title: "The Great Recession",
         description:
           "While Mac and Dennis try to keep Paddy's afloat, Frank and Dee start a family business. A shantytown of newly poor people is forming outside the bar.",
-        link: "https://www.netflix.com/watch/70224532"
+        link: "https://www.hulu.com/watch/101183"
       },
       {
         season: 5,
@@ -612,7 +612,7 @@ module.exports = [
         title: "The Gang Gives Frank an Intervention",
         description:
           "When Frank's reckless lifestyle becomes an inconvenience for the gang, they call for an intervention.",
-        link: "https://www.netflix.com/watch/70224533"
+        link: "https://www.hulu.com/watch/101903"
       },
       {
         season: 5,
@@ -624,7 +624,7 @@ module.exports = [
         title: "The Waitress Is Getting Married",
         description:
           "Jealous that the Waitress is beating her to the altar, Dee tries to derail the wedding. The guys distract Charlie by getting him in the dating scene.",
-        link: "https://www.netflix.com/watch/70224534"
+        link: "https://www.hulu.com/watch/103427"
       },
       {
         season: 5,
@@ -635,7 +635,7 @@ module.exports = [
         title: "The World Series Defense",
         description:
           "The gang tells a judge the troubles they encountered during game 5 of the 2008 World Series in hopes that it will clear them of a parking citation.",
-        link: "https://www.netflix.com/watch/70224535"
+        link: "https://www.hulu.com/watch/104781"
       },
       {
         season: 5,
@@ -647,7 +647,7 @@ module.exports = [
         title: "The Gang Wrestles for the Troops",
         description:
           "The gang puts on a wrestling show for the returning troops. Meanwhile, the soldier Dee has been chatting with online isn't what she expected.",
-        link: "https://www.netflix.com/watch/70224536"
+        link: "https://www.hulu.com/watch/106903"
       },
       {
         season: 5,
@@ -659,7 +659,7 @@ module.exports = [
         title: "Paddy's Pub: Home of the Original Kitten Mittens",
         description:
           "When a merchandising convention comes to town, the gang tries to develop marketable products in an attempt to build the Paddy's brand.",
-        link: "https://www.netflix.com/watch/70224537"
+        link: "https://www.hulu.com/watch/107993"
       },
       {
         season: 5,
@@ -670,7 +670,7 @@ module.exports = [
         title: "Mac and Dennis Break Up",
         description:
           "Relationships are put to the test when Mac and Dennis decide to spend some time apart.",
-        link: "https://www.netflix.com/watch/70224538"
+        link: "https://www.hulu.com/watch/107997"
       },
       {
         season: 5,
@@ -682,7 +682,7 @@ module.exports = [
         title: "The D.E.N.N.I.S. System",
         description:
           "Dennis reveals his foolproof system for seducing any woman to the rest of the gang, but none of them can seem to grasp it.",
-        link: "https://www.netflix.com/watch/70224539"
+        link: "https://www.hulu.com/watch/109162"
       },
       {
         season: 5,
@@ -693,7 +693,7 @@ module.exports = [
         title: "Mac and Charlie Write a Movie",
         description:
           "Dee lands herself a role in the new M. Night Shyamalan movie, and Mac and Charlie see it as the perfect opportunity to sell their movie script.",
-        link: "https://www.netflix.com/watch/70224541"
+        link: "https://www.hulu.com/watch/110635"
       },
       {
         season: 5,
@@ -705,7 +705,7 @@ module.exports = [
         title: "The Gang Reignites the Rivalry",
         description:
           "After serving a 10-year ban, the Paddy's team is once again eligible to compete in Flipadelphia, a citywide flip cup tournament.",
-        link: "https://www.netflix.com/watch/70224542"
+        link: "https://www.hulu.com/watch/115381"
       }
     ],
     shortName: "S5",
@@ -731,7 +731,7 @@ module.exports = [
         title: "Mac Fights Gay Marriage",
         description:
           "Mac pulls out the big guns to protect the sanctity of marriage, while the rest of the gang reaps the rewards of marital bliss.",
-        link: "https://www.netflix.com/watch/70224543"
+        link: "https://www.hulu.com/watch/180938"
       },
       {
         season: 6,
@@ -748,7 +748,7 @@ module.exports = [
         title: "Dennis Gets Divorced",
         description:
           "Marital bliss turns to marital business as the gang experiences the emotional and economic tribulations of divorce.",
-        link: "https://www.netflix.com/watch/70224544"
+        link: "https://www.hulu.com/watch/181342"
       },
       {
         season: 6,
@@ -759,7 +759,7 @@ module.exports = [
         title: "The Gang Buys a Boat",
         description:
           'The gang attempts to open themselves up to the adventures of the sea after they purchase their "new" boat.',
-        link: "https://www.netflix.com/watch/70224545"
+        link: "https://www.hulu.com/watch/183611"
       },
       {
         season: 6,
@@ -771,7 +771,7 @@ module.exports = [
         title: "Mac's Big Break",
         description:
           "Mac finally gets his big break after correctly answering a trivia question on the radio. Frank, Dennis and Dee turn their banter into a podcast.",
-        link: "https://www.netflix.com/watch/70224546"
+        link: "https://www.hulu.com/watch/196183"
       },
       {
         season: 6,
@@ -782,7 +782,7 @@ module.exports = [
         title: "Mac and Charlie: White Trash",
         description:
           "After getting denied by the local pool club, Mac and Charlie aim to fix up an abandoned pool in order to beat the heat wave.",
-        link: "https://www.netflix.com/watch/70224547"
+        link: "https://www.hulu.com/watch/196182"
       },
       {
         season: 6,
@@ -794,7 +794,7 @@ module.exports = [
         title: "Mac's Mom Burns Her House Down",
         description:
           "Charlie and Mac set up an odd couple after Mac's mom burns the house down, and Frank discovers the importance of paternal care when Dee falls ill.",
-        link: "https://www.netflix.com/watch/70224548"
+        link: "https://www.hulu.com/watch/197942"
       },
       {
         season: 6,
@@ -812,7 +812,7 @@ module.exports = [
         title: "Who Got Dee Pregnant?",
         description:
           "When Dee reveals she's pregnant, the guys hazily recall their last Halloween party to determine if one of them might be the father.",
-        link: "https://www.netflix.com/watch/70224549"
+        link: "https://www.hulu.com/watch/197943"
       },
       {
         season: 6,
@@ -824,7 +824,7 @@ module.exports = [
         title: "The Gang Gets a New Member",
         description:
           "A blast from the past prompts the guys to expand membership and Dee to reconsider her future.",
-        link: "https://www.netflix.com/watch/70224550"
+        link: "https://www.hulu.com/watch/197941"
       },
       {
         season: 6,
@@ -836,7 +836,7 @@ module.exports = [
         title: "Dee Reynolds: Shaping America's Youth",
         description:
           "Dee takes a job as a substitute drama teacher and shows her students the gang's take on the Lethal Weapon series: Lethal Weapon 5.",
-        link: "https://www.netflix.com/watch/70224551"
+        link: "https://www.hulu.com/watch/197940"
       },
       {
         season: 6,
@@ -847,7 +847,7 @@ module.exports = [
         title: "Charlie Kelly: King of the Rats",
         description:
           "When keeping the basement rodent-free drives Charlie to the brink, the gang puts the cynicism aside and throws a surprise party to cheer him up.",
-        link: "https://www.netflix.com/watch/70224552"
+        link: "https://www.hulu.com/watch/197939"
       },
       {
         season: 6,
@@ -859,7 +859,7 @@ module.exports = [
         title: "The Gang Gets Stranded in the Woods",
         description:
           "En route to Atlantic City for a charity benefit, Frank, Dee and Mac get stuck in the woods, while Dennis and Charlie have the night of their lives.",
-        link: "https://www.netflix.com/watch/70224553"
+        link: "https://www.hulu.com/watch/197938"
       },
       {
         season: 6,
@@ -877,7 +877,7 @@ module.exports = [
         title: "Dee Gives Birth",
         description:
           "Before Dee's baby arrives, the gang tries to figure out who is the father by throwing a house party for all her former flings.",
-        link: "https://www.netflix.com/watch/70224554"
+        link: "https://www.hulu.com/watch/200947"
       },
       {
         season: 6,
@@ -894,7 +894,7 @@ module.exports = [
         title: "A Very Sunny Christmas",
         description:
           "The gang embarks on a holiday adventure filled with stolen toys, naked elves and a bloody run-in with Santa Claus that is guaranteed to spread cheer.",
-        link: "https://www.netflix.com/watch/70224555"
+        link: "https://www.hulu.com/watch/707642"
       }
     ],
     shortName: "S6",
@@ -914,7 +914,7 @@ module.exports = [
         title: "Frank's Pretty Woman",
         description:
           'With Frank intent on marrying a prostitute, the gang makes the best of it by trying to uncover the heart of gold inside Frank\'s "pretty woman."',
-        link: "https://www.netflix.com/watch/70224113"
+        link: "https://www.hulu.com/watch/708255"
       },
       {
         season: 7,
@@ -926,7 +926,7 @@ module.exports = [
         title: "The Gang Goes to the Jersey Shore",
         description:
           "Dee and Dennis take the gang to their favorite childhood vacation spot, where things aren't quite how they remember.",
-        link: "https://www.netflix.com/watch/70224114"
+        link: "https://www.hulu.com/watch/708228"
       },
       {
         season: 7,
@@ -938,7 +938,7 @@ module.exports = [
         title: "Frank Reynolds' Little Beauties",
         description:
           'Frank accidentally gets into the child pageantry business and is terrified of coming across as a "diddler."',
-        link: "https://www.netflix.com/watch/70224115"
+        link: "https://www.hulu.com/watch/708234"
       },
       {
         season: 7,
@@ -949,7 +949,7 @@ module.exports = [
         title: "Sweet Dee Gets Audited",
         description:
           "Desperate times call for truly sad and horrific measures as Sweet Dee tries to get out of an IRS audit.",
-        link: "https://www.netflix.com/watch/70224116"
+        link: "https://www.hulu.com/watch/708237"
       },
       {
         season: 7,
@@ -961,7 +961,7 @@ module.exports = [
         title: "Frank's Brother",
         description:
           "The gang is shocked to meet Frank's long-lost brother, Gino, when he unexpectedly arrives at Paddy's Pub and exposes a wealth of family secrets.",
-        link: "https://www.netflix.com/watch/70224117"
+        link: "https://www.hulu.com/watch/708236"
       },
       {
         season: 7,
@@ -973,7 +973,7 @@ module.exports = [
         title: "The Storm of the Century",
         description:
           "With an apocalyptic storm headed toward Philly, the gang joins the panicking masses in a race to secure scarce resources.",
-        link: "https://www.netflix.com/watch/70224118"
+        link: "https://www.hulu.com/watch/708232"
       },
       {
         season: 7,
@@ -984,7 +984,7 @@ module.exports = [
         title: "Chardee MacDennis: The Game of Games",
         description:
           "What's the gang to do on a rainy day? Dee and Dennis square off against Mac, Charlie and Frank in a twisted battle of wits, wild cards and wine.",
-        link: "https://www.netflix.com/watch/70224119"
+        link: "https://www.hulu.com/watch/708233"
       },
       {
         season: 7,
@@ -995,7 +995,7 @@ module.exports = [
         title: "The ANTI-Social Network",
         description:
           "After a bar patron enrages the gang, Mac and Dee take to the Internet to stalk their prey, while Dennis and Charlie track him the old-fashioned way.",
-        link: "https://www.netflix.com/watch/70224120"
+        link: "https://www.hulu.com/watch/708227"
       },
       {
         season: 7,
@@ -1006,7 +1006,7 @@ module.exports = [
         title: "The Gang Gets Trapped",
         description:
           'The gang\'s plan to extract an "artifact" from a residence is jeopardized when the owners turn out to be home.',
-        link: "https://www.netflix.com/watch/70224121"
+        link: "https://www.hulu.com/watch/708235"
       },
       {
         season: 7,
@@ -1017,7 +1017,7 @@ module.exports = [
         title: "How Mac Got Fat",
         description:
           "Step inside the confession booth with Mac as he tells a befuddled priest why the rest of the gang is at fault for his fatness.",
-        link: "https://www.netflix.com/watch/70224122"
+        link: "https://www.hulu.com/watch/708229"
       },
       {
         season: 7,
@@ -1028,7 +1028,7 @@ module.exports = [
         title: "Thunder Gun Express",
         description:
           "The gang will do whatever it takes to see the hottest action movie of the summer, Thunder Gun Express, before it leaves the theaters.",
-        link: "https://www.netflix.com/watch/70224123"
+        link: "https://www.hulu.com/watch/708238"
       },
       {
         season: 7,
@@ -1040,7 +1040,7 @@ module.exports = [
         title: "The High School Reunion",
         description:
           "The gang attends their high school reunion with a lot to prove. Part 1 of 2.",
-        link: "https://www.netflix.com/watch/70224124"
+        link: "https://www.hulu.com/watch/708231"
       },
       {
         season: 7,
@@ -1052,7 +1052,7 @@ module.exports = [
         title: "The High School Reunion: Part 2: The Gang's Revenge",
         description:
           "The gang devises a new plan of attack at their high school reunion. Part 2 of 2.",
-        link: "https://www.netflix.com/watch/70226480"
+        link: "https://www.hulu.com/watch/708230"
       }
     ],
     shortName: "S7",
@@ -1073,7 +1073,7 @@ module.exports = [
         title: "Pop-Pop: The Final Solution",
         description:
           "Dennis and Dee's ailing grandfather Pop-Pop is wasting away in the hospital, and they have to decide whether or not to pull the plug. But things get complicated when The Gang learns of Pop-Pop's history as a Nazi.",
-        link: "https://www.netflix.com/watch/70228412"
+        link: "https://www.hulu.com/watch/708266"
       },
       {
         season: 8,
@@ -1084,7 +1084,7 @@ module.exports = [
         title: "The Gang Recycles Their Trash",
         description:
           "The gang eye a trash-collecting contract with the city of Philadelphia after the town's garbage collectors go on strike.",
-        link: "https://www.netflix.com/watch/70228413"
+        link: "https://www.hulu.com/watch/708247"
       },
       {
         season: 8,
@@ -1101,7 +1101,7 @@ module.exports = [
         title: "The Maureen Ponderosa Wedding Massacre",
         description:
           "Dennis and the gang crash Maureen's wedding to make certain he'll be able to sever all ties, only to discover a union much scarier than kissing cousins.",
-        link: "https://www.netflix.com/watch/70228414"
+        link: "https://www.hulu.com/watch/708267"
       },
       {
         season: 8,
@@ -1113,7 +1113,7 @@ module.exports = [
         title: "Charlie and Dee Find Love",
         description:
           "When Charlie and Dee invade the rarefied world of the 1%, they find a romantic connection with two members of one of Philly's wealthiest families.",
-        link: "https://www.netflix.com/watch/70228415"
+        link: "https://www.hulu.com/watch/708253"
       },
       {
         season: 8,
@@ -1124,7 +1124,7 @@ module.exports = [
         title: "The Gang Gets Analyzed",
         description:
           "The Gang gets Freudian as they step into the therapist's office to work through their mountain of issues.",
-        link: "https://www.netflix.com/watch/70228416"
+        link: "https://www.hulu.com/watch/708265"
       },
       {
         season: 8,
@@ -1136,7 +1136,7 @@ module.exports = [
         title: "Charlie's Mom Has Cancer",
         description:
           "In perhaps the most depraved scheme of them all, The Gang rallies around Charlie's mom as she battles cancer.",
-        link: "https://www.netflix.com/watch/70228417"
+        link: "https://www.hulu.com/watch/708264"
       },
       {
         season: 8,
@@ -1147,7 +1147,7 @@ module.exports = [
         title: "Frank's Back in Business",
         description:
           "With Charlie under his wing, Frank cleans up so he can get his hands dirty and help out his old company with one last big merger. While an unwritten rule of the bar gets the rest of the gang caught up in a case of mistaken identity.",
-        link: "https://www.netflix.com/watch/70228418"
+        link: "https://www.hulu.com/watch/708257"
       },
       {
         season: 8,
@@ -1158,7 +1158,7 @@ module.exports = [
         title: "Charlie Rules the World",
         description:
           "After slipping into an unhealthy obsession with computer games, The Gang wrestles to define the difference between the real and the virtual worlds.",
-        link: "https://www.netflix.com/watch/70228419"
+        link: "https://www.hulu.com/watch/708268"
       },
       {
         season: 8,
@@ -1170,7 +1170,7 @@ module.exports = [
         title: "The Gang Dines Out",
         description:
           "Every member of The Gang has something to celebrate at Guigino's, Philly's finest eatery.",
-        link: "https://www.netflix.com/watch/70228420"
+        link: "https://www.hulu.com/watch/708248"
       },
       {
         season: 8,
@@ -1181,7 +1181,7 @@ module.exports = [
         title: "Reynolds vs. Reynolds: The Cereal Defense",
         description:
           "Court is in session at Paddy's Pub as Frank and Dennis present their cases to the rest of the gang, resulting in a verdict that will change their lives FOREVER...but not really.",
-        link: "https://www.netflix.com/watch/70228421"
+        link: "https://www.hulu.com/watch/708263"
       }
     ],
     shortName: "S8",
@@ -1201,7 +1201,7 @@ module.exports = [
         title: "The Gang Broke Dee",
         description:
           "Dee embraces the desperate, self-loathing qualities the guys have beaten into her over the years, sending her stand-up comedy to unexpected places.",
-        link: "https://www.netflix.com/watch/70228425"
+        link: "https://www.hulu.com/watch/708243"
       },
       {
         season: 9,
@@ -1213,7 +1213,7 @@ module.exports = [
         title: "Gun Fever Too: Still Hot",
         description:
           "After Frank appears on TV advocating gun ownership, the rest of the gang takes a look at the ownership process and alternatives to find common ground.",
-        link: "https://www.netflix.com/watch/70228426"
+        link: "https://www.hulu.com/watch/708244"
       },
       {
         season: 9,
@@ -1225,7 +1225,7 @@ module.exports = [
         title: "The Gang Tries Desperately to Win an Award",
         description:
           "Tired of failing to be recognized for their years in the bar industry, the gang changes their ways to give the patrons what they think they want.",
-        link: "https://www.netflix.com/watch/70228427"
+        link: "https://www.hulu.com/watch/708256"
       },
       {
         season: 9,
@@ -1237,7 +1237,7 @@ module.exports = [
         title: "Mac and Dennis Buy a Timeshare",
         description:
           "The gang does their best to recoup their investments in questionable schemes by dumping their losses on Ben the soldier.",
-        link: "https://www.netflix.com/watch/70228428"
+        link: "https://www.hulu.com/watch/708260"
       },
       {
         season: 9,
@@ -1249,7 +1249,7 @@ module.exports = [
         title: "Mac Day",
         description:
           "Everyone in the gang gets a day to do what they want while everyone else in the gang must participate willingly. This is Mac's day.",
-        link: "https://www.netflix.com/watch/70228429"
+        link: "https://www.hulu.com/watch/708262"
       },
       {
         season: 9,
@@ -1261,7 +1261,7 @@ module.exports = [
         title: "The Gang Saves the Day",
         description:
           "When a trip to a convenience store places the gang in the middle of an armed robbery, each of them explores how they react in extreme situations.",
-        link: "https://www.netflix.com/watch/70228430"
+        link: "https://www.hulu.com/watch/708261"
       },
       {
         season: 9,
@@ -1272,7 +1272,7 @@ module.exports = [
         title: "The Gang Gets Quarantined",
         description:
           "When a severe flu outbreak sweeps Philadelphia the gang quarantine themselves inside of Paddy's in an attempt to keep their singing voices pristine.",
-        link: "https://www.netflix.com/watch/70228431"
+        link: "https://www.hulu.com/watch/708240"
       },
       {
         season: 9,
@@ -1284,7 +1284,7 @@ module.exports = [
         title: "Flowers for Charlie",
         description:
           'When an experiment multiplies Charlie\'s intellect and takes him away from the bar, the rest of the gang struggle to complete menial "Charlie work."',
-        link: "https://www.netflix.com/watch/70228432"
+        link: "https://www.hulu.com/watch/708241"
       },
       {
         season: 9,
@@ -1296,7 +1296,7 @@ module.exports = [
         title: "The Gang Makes Lethal Weapon 6",
         description:
           "Creative differences over what constitutes tasteful nudity cause Frank to pull his money out of Lethal Weapon 6 during filming.",
-        link: "https://www.netflix.com/watch/70228433"
+        link: "https://www.hulu.com/watch/708239"
       },
       {
         season: 9,
@@ -1322,7 +1322,7 @@ module.exports = [
         title: "The Gang Squashes Their Beefs",
         description:
           "When some bad blood with old foes compromises their ideal Thanksgiving, the gang decides to make amends by breaking bread with those they've hurt.",
-        link: "https://www.netflix.com/watch/70228434"
+        link: "https://www.hulu.com/watch/708242"
       }
     ],
     shortName: "S9",
@@ -1343,7 +1343,7 @@ module.exports = [
         title: "The Gang Beats Boggs",
         description:
           "On a cross-country flight, the gang tries to break Wade Boggs's beer-drinking record while Dennis and Frank compete for entry in the mile-high club.",
-        link: "https://www.netflix.com/watch/80043914"
+        link: "https://www.hulu.com/watch/733977"
       },
       {
         season: 10,
@@ -1355,7 +1355,7 @@ module.exports = [
         title: "The Gang Group Dates",
         description:
           "Determined to find their love matches, the gang decides to host a group dating night at the bar. Meanwhile, Dennis gets hooked on a dating Web site.",
-        link: "https://www.netflix.com/watch/80043915"
+        link: "https://www.hulu.com/watch/738537"
       },
       {
         season: 10,
@@ -1367,7 +1367,7 @@ module.exports = [
         title: "Psycho Pete Returns",
         description:
           'When a murderous acquaintance of Charlie and Mac\'s is released from a mental institution, all they want to do is bring back the "fun psycho" in him.',
-        link: "https://www.netflix.com/watch/80043916"
+        link: "https://www.hulu.com/watch/741702"
       },
       {
         season: 10,
@@ -1378,7 +1378,7 @@ module.exports = [
         title: "Charlie Work",
         description:
           "Charlie prepares Paddy's for a health inspection, but the gang's less-than-hygienic scheme involving airline miles and meat may thwart his efforts.",
-        link: "https://www.netflix.com/watch/80043917"
+        link: "https://www.hulu.com/watch/745916"
       },
       {
         season: 10,
@@ -1390,7 +1390,7 @@ module.exports = [
         title: "The Gang Spies Like U.S.",
         description:
           "When a fish cannery from China opens up in the neighborhood, Dennis and Mac send Dee to do some spying, piquing Charlie and Frank's suspicions.",
-        link: "https://www.netflix.com/watch/80043918"
+        link: "https://www.hulu.com/watch/749168"
       },
       {
         season: 10,
@@ -1402,7 +1402,7 @@ module.exports = [
         title: "The Gang Misses the Boat",
         description:
           "After missing the boat, literally and figuratively, the pals feel their group dynamic is undermining individual potential, so they go separate ways.",
-        link: "https://www.netflix.com/watch/80043919"
+        link: "https://www.hulu.com/watch/751381"
       },
       {
         season: 10,
@@ -1420,7 +1420,7 @@ module.exports = [
         title: "Mac Kills His Dad",
         description:
           "When it appears that Mac's father has been charged with murder, Mac sets out to prove his innocence, with help from Charlie.",
-        link: "https://www.netflix.com/watch/80043920"
+        link: "https://www.hulu.com/watch/755096"
       },
       {
         season: 10,
@@ -1432,7 +1432,7 @@ module.exports = [
         title: "The Gang Goes on Family Fight",
         description:
           "The gang appears on a game show and Dennis is determined to keep them all classy, but their kookiness leaves the host loathing every one of them.",
-        link: "https://www.netflix.com/watch/80043921"
+        link: "https://www.hulu.com/watch/757888"
       },
       {
         season: 10,
@@ -1444,7 +1444,7 @@ module.exports = [
         title: "Frank Retires",
         description:
           "When Frank decides it's finally time for him to retire, the gang repeatedly locks horns as they try to determine who should take over Paddy's.",
-        link: "https://www.netflix.com/watch/80043922"
+        link: "https://www.hulu.com/watch/762460"
       },
       {
         season: 10,
@@ -1456,7 +1456,7 @@ module.exports = [
         title: "Ass Kickers United: Mac and Charlie Join a Cult",
         description:
           "Mac and Charlie's new workout program is a fake cult Dennis created to protect his stash of thin mints. Frank and Dee try to use it to their benefit.",
-        link: "https://www.netflix.com/watch/80043923"
+        link: "https://www.hulu.com/watch/761343"
       }
     ],
     shortName: "S10",
@@ -1477,7 +1477,7 @@ module.exports = [
         title: "Chardee MacDennis 2: Electric Boogaloo",
         description:
           "The gang agrees to a truce while demonstrating their game Chardee MacDennis for an interested board game executive, but the nature of the game quickly sends things off the rails.",
-        link: "https://www.netflix.com/watch/80101446"
+        link: "https://www.hulu.com/watch/890730"
       },
       {
         season: 11,
@@ -1489,7 +1489,7 @@ module.exports = [
         title: "Frank Falls Out the Window",
         description:
           "Frank falls out the window and suffers a brain injury that leads to him thinking it's 2006. When the gang discovers this, they immediately try to profit from his trauma and rectify the mistakes they've made ten years ago.",
-        link: "https://www.netflix.com/watch/80101447"
+        link: "https://www.hulu.com/watch/891990"
       },
       {
         season: 11,
@@ -1501,7 +1501,7 @@ module.exports = [
         title: "The Gang Hits the Slopes",
         description:
           "In this send-up of 1980s ski movies and sex comedies, Dennis, Dee, Mac, and Charlie go skiing in the Poconos and Frank plots to turn the ski resort into a private club for the rich.",
-        link: "https://www.netflix.com/watch/80101448"
+        link: "https://www.hulu.com/watch/894045"
       },
       {
         season: 11,
@@ -1513,7 +1513,7 @@ module.exports = [
         title: "Dee Made a Smut Film",
         description:
           "After Dee shows the guys a clip from an independent film she appeared in that turns out to be a Cinemax softcore porno starring Richard Greico and the gang argues on what's considered art these days, Mac and Frank attempt to market Charlie's childish doodles as modern art while Dennis recruits Dee to adapt his erotic memoirs into a film to cash in on the success of 50 Shades of Grey.",
-        link: "https://www.netflix.com/watch/80101449"
+        link: "https://www.hulu.com/watch/896999"
       },
       {
         season: 11,
@@ -1525,7 +1525,7 @@ module.exports = [
         title: "Mac & Dennis Move to the Suburbs",
         description:
           "Dee's anger and a wager from Frank lead Mac and Dennis to try living in a rented suburban house, with disastrous results.",
-        link: "https://www.netflix.com/watch/80101450"
+        link: "https://www.hulu.com/watch/898785"
       },
       {
         season: 11,
@@ -1537,7 +1537,7 @@ module.exports = [
         title: "Being Frank",
         description:
           "In this episode shown through a first-person POV, Frank gets left out of a plan to get Dennis' SUV out of an impound lot and tries to keep up, only to get distracted by drugs, a hospital visit, Bill Ponderosa, and Artemis.",
-        link: "https://www.netflix.com/watch/80101451"
+        link: "https://www.hulu.com/watch/901299"
       },
       {
         season: 11,
@@ -1558,7 +1558,7 @@ module.exports = [
         title: "McPoyle vs. Ponderosa: The Trial of the Century",
         description:
           'Liam McPoyle (not present in court due to getting pink eye in his one good eye) sues Bill Ponderosa for the loss of his eye during "The Maureen Ponderosa Wedding Massacre."',
-        link: "https://www.netflix.com/watch/80101452"
+        link: "https://www.hulu.com/watch/906459"
       },
       {
         season: 11,
@@ -1570,7 +1570,7 @@ module.exports = [
         title: "Charlie Catches a Leprechaun",
         description:
           'Dennis attempts to "streamline" Paddy\'s by creating a mobile "Paddy\'s Wagon" for Saint Patrick\'s Day, which quickly falls apart, while Charlie attempts to capture a leprechaun.',
-        link: "https://www.netflix.com/watch/80101453"
+        link: "https://www.hulu.com/watch/907052"
       },
       {
         season: 11,
@@ -1582,7 +1582,7 @@ module.exports = [
         title: "The Gang Goes to Hell",
         description:
           "Part one of two. Mac treats the gang to a Christian-themed cruise, causing the gang to confront their various vices, while Mac discovers a few shocking truths about his beliefs.",
-        link: "https://www.netflix.com/watch/80101454"
+        link: "https://www.hulu.com/watch/912533"
       },
       {
         season: 11,
@@ -1593,7 +1593,7 @@ module.exports = [
         title: "The Gang Goes to Hell: Part Two",
         description:
           "Conclusion. With disaster looming, the gang tries unsuccessfully to make amends with one another while locked in a brig that's flooding with ocean water.",
-        link: "https://www.netflix.com/watch/80101455"
+        link: "https://www.hulu.com/watch/914059"
       }
     ],
     shortName: "S11",
