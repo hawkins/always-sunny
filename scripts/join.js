@@ -1,3 +1,8 @@
+/*
+ * Note: The following data files have been removed, since this script has made them obsolete.
+ * This script remains in the repository for archival purposes and will be deleted at a later date.
+ */
+
 const Sunny = require("../src/data/Sunny");
 const EpisodeDetails = require("../src/data/EpisodeDetails");
 const fs = require("fs");
