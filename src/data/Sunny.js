@@ -2,7 +2,6 @@ module.exports = [
   {
     title: "Season 1",
     year: 2005,
-    seq: 1,
     episodes: [
       {
         id: 70224484,
