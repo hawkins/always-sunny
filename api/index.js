@@ -2,11 +2,14 @@ const express = require("express");
 const graphqlHTTP = require("express-graphql");
 const { buildSchema } = require("graphql");
 const Series = require("../src/data/series");
+const episodes = require("../src/data/episodes");
 
 /* GraphQL Schema */
 const schema = buildSchema(`
   type Query {
-    episode(season: Int!, episode: Int!): Episode
+    getEpisode(season: Int!, episode: Int!): Episode
+    getEpisodes(season: Int, lead: String, guest: String, writer: String): [Episode]
+    getSeason(season: Int!): Season    
   }
 
   type Episode {
@@ -30,8 +33,27 @@ const schema = buildSchema(`
   }
 `);
 
-const episode = ({ season, episode }) => {
-  return Series[season - 1].episodes[episode - 1];
+/* GraphQL Query Resolvers */
+const rootValue = {
+  getEpisode: ({ season, episode }) => {
+    let candidates = episodes.filter(
+      ep => ep.season === season && ep.episode === episode
+    );
+    if (candidates.length > 0) return candidates[0];
+    else return null;
+  },
+  getEpisodes: ({ lead, writer, season, guest }) => {
+    return episodes.filter(ep => {
+      if (season && ep.season !== season) return false;
+      if (lead && ep.lead.indexOf(lead) === -1) return false;
+      if (guest && ep.guest.indexOf(guest) === -1) return false;
+      if (writer && ep.writers.indexOf(writer) === -1) return false;
+      return true;
+    });
+  },
+  getSeason: ({ season }) => {
+    return Series[season - 1];
+  }
 };
 
 /* Express App */
@@ -40,7 +62,7 @@ app.use(
   "/",
   graphqlHTTP({
     schema,
-    rootValue: { episode },
+    rootValue: rootValue,
     graphiql: true
   })
 );
