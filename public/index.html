@@ -1,22 +1,41 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
-    <meta name="theme-color" content="#eab608">
-    <title>The Gang Picks an Episode</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+  <meta name="theme-color" content="#eab608">
+  <title>The Gang Picks an Episode</title>
+  <meta property="og:title" content="The Gang Picks an Episode" />
+  <meta property="og:description" content="The unofficial It's Always Sunny in Philadelphia random episode picker" />
+  <meta property="og:image" content="http://thegangpicksanepisode.com/opengraph.png" />
+  <meta property="og:image:secure_url" content="https://thegangpicksanepisode.com/opengraph.png" />
+  <meta property="og:site_name" content="The Gang Picks an Episode" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="https://thegangpicksanepisode.com/opengraph.png" />
+  <meta name="twitter:description" content="The unofficial It's Always Sunny in Philadelphia random episode picker" />
+  <meta name="twitter:site" content="@hawkinjs" />
+  <meta name="twitter:site:id" content="@hawkinjs" />
+  <meta name="twitter:creator" content="@hawkinjs" />
+  <meta name="twitter:creator:id" content="@hawkinjs" />
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
     ga('create', 'UA-78807236-2', 'auto');
     ga('send', 'pageview');
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>
