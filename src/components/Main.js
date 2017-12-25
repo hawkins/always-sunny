@@ -4,48 +4,10 @@ import Episode from "./Episode";
 import Controls from "./Controls";
 import Search from "./Search";
 import Series from "../data/series";
-
-const episodes = Series.map(s => s.episodes).reduce((a, b) => a.concat(b));
+import episodes from "../data/episodes";
 
 //------------------------------------------------------------------------------
 // Helper functions to manage data
-function getWriters(lead, season) {
-  let list = [{ value: "All", count: 0 }];
-
-  for (var i = 0; i < episodes.length; i++) {
-    // Only consider episodes in correct season and with our lead character prominent
-    if (
-      (season === "All" || episodes[i].season === season) &&
-      (lead === "All" || episodes[i].lead.indexOf(lead) !== -1)
-    ) {
-      // Increment 'All' count
-      list[0].count++;
-
-      for (let j = 0; j < episodes[i].writers.length; j++) {
-        // Find writer in list and increment count
-        for (let k = 0; k <= list.length; k++) {
-          if (!list[k]) {
-            // Add this writer to list
-            list.push({ value: episodes[i].writers[j], count: 1 });
-            break;
-          }
-
-          if (list[k].value === episodes[i].writers[j]) {
-            // Increment this writer's count
-            list[k].count++;
-            break;
-          }
-        }
-      }
-    }
-  }
-
-  // Sort in descending order
-  list.sort((a, b) => b.count - a.count);
-
-  return list;
-}
-
 function getEpisodeDetails(season, episode) {
   return Series[season - 1].episodes[episode - 1];
 }
@@ -140,7 +102,7 @@ class Main extends React.PureComponent {
   }
 
   updateURL() {
-    const { season, episode, history } = this.props;
+    const { episode, history } = this.props;
 
     if (episode !== undefined) {
       history.push(`/${this.state.season}/${this.state.episode}`);
@@ -150,12 +112,10 @@ class Main extends React.PureComponent {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    if (
+    return (
       nextState.episode !== this.state.episode ||
       nextState.season !== this.state.season
-    )
-      return true;
-    return false;
+    );
   }
 
   handlePreviousClick() {
@@ -183,8 +143,6 @@ class Main extends React.PureComponent {
           onPreviousClick={this.handlePreviousClick}
           onNextClick={this.handleNextClick}
           onApplyClick={this.handleApplyClick}
-          writers={this.writers}
-          getWriters={getWriters}
         />
         <Episode episode={this.state} />
         <Search episodes={episodes} onSelect={this.handleSearchSelection} />

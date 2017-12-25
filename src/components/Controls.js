@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button } from "react-toolbox/lib/button";
 import Dropdown from "react-toolbox/lib/dropdown";
-import Series from "../data/series";
+import episodes from "../data/episodes";
 
 //------------------------------------------------------------------------------
 // Styles
@@ -16,6 +16,45 @@ const contentStyle = {
   flexDirection: "column",
   flexGrow: 2
 };
+
+//------------------------------------------------------------------------------
+// Helper functions
+function getWriters(lead, season) {
+  let list = [{ value: "All", count: 0 }];
+
+  for (var i = 0; i < episodes.length; i++) {
+    // Only consider episodes in correct season and with our lead character prominent
+    if (
+      (season === "All" || episodes[i].season === season) &&
+      (lead === "All" || episodes[i].lead.indexOf(lead) !== -1)
+    ) {
+      // Increment 'All' count
+      list[0].count++;
+
+      for (let j = 0; j < episodes[i].writers.length; j++) {
+        // Find writer in list and increment count
+        for (let k = 0; k <= list.length; k++) {
+          if (!list[k]) {
+            // Add this writer to list
+            list.push({ value: episodes[i].writers[j], count: 1 });
+            break;
+          }
+
+          if (list[k].value === episodes[i].writers[j]) {
+            // Increment this writer's count
+            list[k].count++;
+            break;
+          }
+        }
+      }
+    }
+  }
+
+  // Sort in descending order
+  list.sort((a, b) => b.count - a.count);
+
+  return list;
+}
 
 //------------------------------------------------------------------------------
 // Component
@@ -45,13 +84,9 @@ export default class Controls extends Component {
     // [{ value: 'All'}, { value: 1 }, ..., { value: 12 }]
     this.seasons = [
       "All",
-      ...Array.from(
-        new Set(
-          Series.map(s => s.episodes)
-            .reduce((a, b) => a.concat(b))
-            .map(a => a.season)
-        ).values()
-      ).sort((a, b) => a - b)
+      ...Array.from(new Set(episodes.map(a => a.season)).values()).sort(
+        (a, b) => a - b
+      )
     ].map(a => ({ value: a }));
 
     this.updateWriters = this.updateWriters.bind(this);
@@ -67,7 +102,7 @@ export default class Controls extends Component {
   }
 
   updateWriters(lead, season) {
-    this.writers = this.props.getWriters(lead, season);
+    this.writers = getWriters(lead, season);
   }
 
   renderLead(item) {
