@@ -16,26 +16,21 @@ export default ({ episode }) => (
     <h5 className="dark">
       Season: {episode.season} Episode: {episode.episode}
     </h5>
-
     <p className="description">{episode.description}</p>
-
     <p>
       <b>Lead characters: </b>
       <span className="dark">{episode.lead.map(commaSeparatedItems)}</span>
     </p>
     {episode.guest ? (
       <p>
-        <b>Guest characters: </b>{" "}
+        <b>Guest characters: </b>
         <span className="dark">{episode.guest.map(commaSeparatedItems)}</span>
       </p>
-    ) : (
-      undefined
-    )}
+    ) : null}
     <p>
       <b>Written by: </b>
       <span className="dark">{episode.writers.map(commaSeparatedItems)}</span>
     </p>
-
     <Button
       raised
       primary

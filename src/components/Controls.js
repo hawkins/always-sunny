@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-
 import { Button } from "react-toolbox/lib/button";
 import Dropdown from "react-toolbox/lib/dropdown";
+import Series from "../data/series";
 
 //------------------------------------------------------------------------------
 // Styles
@@ -42,20 +42,17 @@ export default class Controls extends Component {
       { value: "Mac" }
     ];
 
+    // [{ value: 'All'}, { value: 1 }, ..., { value: 12 }]
     this.seasons = [
-      { value: "All" },
-      { value: 1 },
-      { value: 2 },
-      { value: 3 },
-      { value: 4 },
-      { value: 5 },
-      { value: 6 },
-      { value: 7 },
-      { value: 8 },
-      { value: 9 },
-      { value: 10 },
-      { value: 11 }
-    ];
+      "All",
+      ...Array.from(
+        new Set(
+          Series.map(s => s.episodes)
+            .reduce((a, b) => a.concat(b))
+            .map(a => a.season)
+        ).values()
+      ).sort((a, b) => a - b)
+    ].map(a => ({ value: a }));
 
     this.updateWriters = this.updateWriters.bind(this);
     this.onApplyClick = this.onApplyClick.bind(this);
@@ -122,22 +119,16 @@ export default class Controls extends Component {
 
   onLeadChange(value) {
     this.updateWriters(value, this.state.season);
-    this.setState({
-      lead: value
-    });
+    this.setState({ lead: value });
   }
 
   onWriterChange(value) {
-    this.setState({
-      writer: value
-    });
+    this.setState({ writer: value });
   }
 
   onSeasonChange(value) {
     this.updateWriters(this.state.lead, value);
-    this.setState({
-      season: value
-    });
+    this.setState({ season: value });
   }
 
   render() {
