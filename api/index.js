@@ -1,8 +1,8 @@
 const express = require("express");
 const graphqlHTTP = require("express-graphql");
 const { buildSchema } = require("graphql");
-const Series = require("../src/data/series");
-const episodes = require("../src/data/episodes");
+const Series = require("./series");
+const episodes = require("./episodes");
 
 /* GraphQL Schema */
 const schema = buildSchema(`
