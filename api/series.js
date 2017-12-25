@@ -1615,7 +1615,7 @@ module.exports = [
         title: "The Gang Goes to a Water Park",
         description:
           "The gang spends the day at the water park. Dennis teaches a twelve-year-old girl the ways of being a manipulative sociopath, Mac and Dee (the latter of which is paranoid over how much urine there is in water park water) get stuck on a water slide, and Frank and Charlie try to go on every ride, including one that's not open yet, which leads to disastrous results.",
-        link: "https://www.hulu.com/1162474"
+        link: "https://www.hulu.com/watch/1162474"
       },
       {
         season: 12,
@@ -1627,7 +1627,7 @@ module.exports = [
         title: "Old Lady House: A Situation Comedy",
         description:
           "Charlie thinks Mac's mom is holding his mom hostage so the gang installs spy cameras in their house to monitor what's going on...and Dennis ends up making their videotaped antics into a sitcom.",
-        link: "https://www.hulu.com/1161770"
+        link: "https://www.hulu.com/watch/1161770"
       },
       {
         season: 12,
@@ -1639,7 +1639,7 @@ module.exports = [
         title: "Wolf Cola: A Public Relations Nightmare",
         description:
           "Frank's Fluids, LLC is in big trouble after a news segment reports that Wolf Cola has become the official drink of Boko Haram instead of Boca Raton. Meanwhile, Mac and Charlie try to promote Fight Milk (the drink they tried to promote near the end of \"Frank's Back in Business\") which leads to more trouble.",
-        link: "https://www.hulu.com/1162473"
+        link: "https://www.hulu.com/watch/1162473"
       },
       {
         season: 12,
@@ -1651,7 +1651,7 @@ module.exports = [
         title: "Making Dennis Reynolds a Murderer",
         description:
           "In this send-up of murderer documentaries such as Making a Murderer and The Jinx, Maureen Ponderosa (who is now almost finished with her operation to turn into an anthropomorphic cat) is found dead in an alley, and Dennis (based on his short-lived marriage to her and the growing evidence that he sexually assaults women) is the prime suspect.",
-        link: "https://www.hulu.com/1162483"
+        link: "https://www.hulu.com/watch/1162483"
       },
       {
         season: 12,
@@ -1662,7 +1662,7 @@ module.exports = [
         title: "Hero or Hate Crime?",
         description:
           "The gang goes to three professional arbitrators to decide who's the rightful owner of a lost scratch-off lottery ticket and prove whether Frank using a homophobic slur against Mac to save him from getting crushed by a piano is considered a heroic act or a hate crime.",
-        link: "https://www.hulu.com/1162491"
+        link: "https://www.hulu.com/watch/1162491"
       },
       {
         season: 12,
@@ -1673,7 +1673,7 @@ module.exports = [
         title: "PTSDee",
         description:
           "After a male stripper realizes he's hit rock bottom by sleeping with her, Dee sets out to help the stripper re-evaluate his life. Meanwhile, Mac and Frank get hooked on a VR war game that takes a mental toll on Mac.",
-        link: "https://www.hulu.com/1162541"
+        link: "https://www.hulu.com/watch/1162541"
       },
       {
         season: 12,
@@ -1684,7 +1684,7 @@ module.exports = [
         title: "The Gang Tends Bar",
         description:
           "It's Valentine's Day, and Paddy's is packed with customers. Dennis demands that the gang actually put in a day's worth of work, but everyone else would rather try to open a crate that's in the alley.",
-        link: "https://www.hulu.com/1162540"
+        link: "https://www.hulu.com/watch/1162540"
       },
       {
         season: 12,
@@ -1696,7 +1696,7 @@ module.exports = [
         title: "A Cricket's Tale",
         description:
           'In this episode that connected with the events from "PTSDee" and "The Gang Tends Bar," Rickety Cricket is presented with a chance to escape the gang\'s toxic influence and recover some of his old life when his estranged father turns up out of the blue to offer him a job with his company, but a strange young woman may complicate things.',
-        link: "https://www.hulu.com/1162543"
+        link: "https://www.hulu.com/watch/1162543"
       },
       {
         season: 12,
@@ -1708,7 +1708,7 @@ module.exports = [
         title: "Dennis' Double Life",
         description:
           'Dennis discovers that the woman he had sex with during his North Dakota layover on "The Gang Beats Boggs" has a child, and Dennis must decide whether to move in with her to raise the kid or leave her a single mother. Meanwhile, Charlie finally has sex with The Waitress and discovers that she\'s not as beautiful and charming as he imagines her.',
-        link: "https://www.hulu.com/1162542"
+        link: "https://www.hulu.com/watch/1162542"
       }
     ],
     shortName: "S12",
