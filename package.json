@@ -1,5 +1,5 @@
 {
-  "name": "react-always-sunny",
+  "name": "thegangpicksanepisode",
   "version": "0.0.0",
   "private": true,
   "devDependencies": {
@@ -58,6 +58,7 @@
     "react": "^15.4.1",
     "react-autosuggest": "^7.0.1",
     "react-dom": "^15.4.1",
+    "react-helmet": "^5.2.0",
     "react-router-dom": "^4.0.0"
   },
   "scripts": {
