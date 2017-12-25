@@ -92,7 +92,6 @@ module.exports = [
   {
     title: "Season 2",
     year: 2006,
-    seq: 2,
     episodes: [
       {
         season: 2,
@@ -222,7 +221,6 @@ module.exports = [
   {
     title: "Season 3",
     year: 2007,
-    seq: 3,
     episodes: [
       {
         season: 3,
@@ -405,7 +403,6 @@ module.exports = [
   {
     title: "Season 4",
     year: 2008,
-    seq: 4,
     episodes: [
       {
         season: 4,
@@ -565,7 +562,6 @@ module.exports = [
   {
     title: "Season 5",
     year: 2009,
-    seq: 5,
     episodes: [
       {
         season: 5,
@@ -714,7 +710,6 @@ module.exports = [
   {
     title: "Season 6",
     year: 2010,
-    seq: 6,
     episodes: [
       {
         season: 6,
@@ -903,7 +898,6 @@ module.exports = [
   {
     title: "Season 7",
     year: 2011,
-    seq: 7,
     episodes: [
       {
         season: 7,
@@ -1061,7 +1055,6 @@ module.exports = [
   {
     title: "Season 8",
     year: 2012,
-    seq: 8,
     episodes: [
       {
         season: 8,
@@ -1190,7 +1183,6 @@ module.exports = [
   {
     title: "Season 9",
     year: 2013,
-    seq: 9,
     episodes: [
       {
         season: 9,
@@ -1331,7 +1323,6 @@ module.exports = [
   {
     title: "Season 10",
     year: 2015,
-    seq: 10,
     episodes: [
       {
         season: 10,
@@ -1465,7 +1456,6 @@ module.exports = [
   {
     title: "Season 11",
     year: 2016,
-    seq: 11,
     episodes: [
       {
         season: 11,
@@ -1602,7 +1592,6 @@ module.exports = [
   {
     title: "Season 12",
     year: 2017,
-    seq: 12,
     episodes: [
       {
         season: 12,
