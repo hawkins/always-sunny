@@ -4,8 +4,6 @@ import TitleBar from "./components/TitleBar";
 import Main from "./components/Main";
 import "./index.css";
 
-import "react-toolbox/lib/commons.scss";
-
 const Child = ({ match: { params: { season, episode } } }) => (
   <Main season={season} episode={episode} />
 );

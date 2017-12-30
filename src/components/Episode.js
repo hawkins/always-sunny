@@ -11,7 +11,6 @@ function commaSeparatedItems(item, index) {
 }
 
 const home = "https://thegangpicksanepisode.com/";
-const image = "opengraph.png";
 
 export default ({ episode }) => (
   <div className="episode">
