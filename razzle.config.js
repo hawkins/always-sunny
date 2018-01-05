@@ -5,7 +5,11 @@ module.exports = {
     // with our own.
     // How else can we override their CSS rules?
     // Should be something like config.module.rules.push({
-    config.module.rules[4] = {
+    const cssRuleIndex = config.module.rules.findIndex(rule => {
+      if (!rule.test) return false;
+      return "a.css".match(rule.test);
+    });
+    config.module.rules[cssRuleIndex] = {
       test: /\.css$/,
       use: [
         "isomorphic-style-loader",

@@ -1,5 +1,5 @@
 import React from "react";
-import AppBar from "react-toolbox/lib/app_bar";
+import AppBar from "react-toolbox/lib/app_bar/AppBar";
 
 const GithubIcon = () => (
   <a

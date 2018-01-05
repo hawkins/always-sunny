@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "react-toolbox/lib/button";
+import Button from "react-toolbox/lib/button/Button";
 import { Helmet } from "react-helmet";
 
 function commaSeparatedItems(item, index) {
