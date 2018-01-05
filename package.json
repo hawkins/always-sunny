@@ -63,7 +63,7 @@
     "raf": "3",
     "razzle": "0.8",
     "react": "16",
-    "react-autosuggest": "^7.0.1",
+    "react-autosuggest": "^9.3.2",
     "react-dom": "16",
     "react-helmet": "^5.2.0",
     "react-router-dom": "4",
