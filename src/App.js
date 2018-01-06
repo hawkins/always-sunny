@@ -1,8 +1,8 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { StaticRouter as Router, Route } from "react-router-dom";
+import ThemeProvider from "react-toolbox/lib/ThemeProvider";
 import TitleBar from "./components/TitleBar";
 import Main from "./components/Main";
-import ThemeProvider from "react-toolbox";
 import theme from "./toolbox/theme";
 import "./index.css";
 
