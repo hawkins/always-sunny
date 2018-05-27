@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "react-toolbox/lib/button";
+import Button from "react-toolbox/lib/button/Button";
 import { Helmet } from "react-helmet";
 
 function commaSeparatedItems(item, index) {
@@ -11,7 +11,6 @@ function commaSeparatedItems(item, index) {
 }
 
 const home = "https://thegangpicksanepisode.com/";
-const image = "opengraph.png";
 
 export default ({ episode }) => (
   <div className="episode">
@@ -51,13 +50,7 @@ export default ({ episode }) => (
       <b>Written by: </b>
       <span className="dark">{episode.writers.map(commaSeparatedItems)}</span>
     </p>
-    <Button
-      raised
-      primary
-      target="_blank"
-      href={episode.link}
-      style={{ marginBottom: 20, fontSize: "1.4rem" }}
-    >
+    <Button raised primary target="_blank" href={episode.link}>
       Watch now on Hulu
     </Button>
   </div>

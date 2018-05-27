@@ -1,0 +1,167 @@
+/*******************************************************************************
+ * HTML and BODY
+ ******************************************************************************/
+
+html,
+body {
+  background-color: #5c5c5c;
+  text-align: center;
+  font-size: 1em !important; /* Why do react-toolbox css rules overule ours? */
+  margin: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+@media screen and (min-width: 900px) {
+  html {
+    overflow: hidden;
+  }
+}
+
+/*******************************************************************************
+  * APP and MAIN
+  ******************************************************************************/
+.App {
+  margin: 0;
+}
+
+.App,
+.main {
+  height: 100%;
+  padding: 10px;
+}
+
+.main {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 899px) {
+  .main {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .main {
+    flex-direction: row;
+  }
+
+  .main > div {
+    max-height: 80vh;
+  }
+}
+
+header {
+  height: 6.4rem !important;
+}
+
+header h1 {
+  font-size: 40px !important;
+  font-family: "Caveat Brush", cursive;
+  color: #101010;
+  font-weight: normal !important;
+}
+
+/*******************************************************************************
+  * EPISODE
+  ******************************************************************************/
+.episode {
+  top: 6.4rem;
+  flex-grow: 2;
+  text-align: center;
+  color: #ecf0f1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.description {
+  padding: 10px;
+}
+
+.episode :not(a) {
+  font-size: 1.1rem;
+}
+
+/* .episode a {
+  height: 3.6rem;
+  line-height: 3.6rem;
+} */
+
+.episode h3 {
+  font-size: 2.5rem;
+  line-height: 1em;
+  margin-bottom: 10px;
+}
+.episode h5 {
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+.dark {
+  color: #bdc3c7;
+}
+
+/*******************************************************************************
+  * CONTROLS and SEARCH
+  ******************************************************************************/
+.controls,
+.search {
+  /*font-size: 1.4rem;*/
+  flex-grow: 1;
+  padding: 20px;
+}
+
+/* Search results scroll size */
+.search {
+  overflow: hidden;
+  min-width: 240px;
+}
+.search > div {
+  overflow-y: auto;
+}
+@media screen and (max-width: 899px) {
+  .search > div {
+    max-height: 50vh;
+  }
+}
+@media screen and (min-width: 900px) {
+  .search > div {
+    max-height: 90%;
+  }
+}
+
+label:first-of-type {
+  font-size: 1.6rem;
+}
+label {
+  font-size: 1.2rem;
+  color: #eab608;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+/* Color selected items, but not those other options in Dropdown */
+.controls > div > div > div > div > .item,
+.search .item {
+  color: #ecf0f1;
+}
+
+/* Hide bullets */
+li {
+  list-style-type: none;
+}
+ul {
+  padding: 0;
+}
+
+input {
+  color: #ecf0f1;
+  padding: 3px;
+  border-radius: 4px;
+  border: 2px solid #eab608;
+  background-color: #555;
+  margin: auto;
+  max-width: 200px;
+  font-size: 1.2rem !important; /* Why do react-toolbox css rules overule ours? */
+}

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Button } from "react-toolbox/lib/button";
-import Dropdown from "react-toolbox/lib/dropdown";
+import Button from "react-toolbox/lib/button/Button";
+import Dropdown from "react-toolbox/lib/dropdown/Dropdown";
 import episodes from "../data/episodes";
 
 //------------------------------------------------------------------------------

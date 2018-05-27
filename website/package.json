@@ -1,0 +1,41 @@
+{
+  "name": "cra",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-autosuggest": "^9.3.4",
+    "react-dom": "^16.3.2",
+    "react-helmet": "^5.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "react-toolbox": "^2.0.0-beta.12"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "toolbox": "react-toolbox-themr"
+  },
+  "devDependencies": {
+    "react-toolbox-themr": "^1.0.2"
+  },
+  "reactToolbox": {
+    "include": [
+      "BUTTON",
+      "APP_BAR",
+      "DROPDOWN"
+    ],
+    "customProperties": {
+      "animation-duration": "0.3s",
+      "color-primary": "#eab608",
+      "color-accent": "var(--palette-pink-a200)",
+      "color-accent-dark": "var(--palette-pink-700)",
+      "color-primary-contrast": "black",
+      "color-primary-dark": "#eab608",
+      "color-accent-contrast": "var(--color-dark-contrast)"
+    },
+    "output": "src/assets/react-toolbox"
+  }
+}
