@@ -76,8 +76,7 @@ app.get("/", (req, res) => {
 });
 
 /* Rock 'n' Roll */
-const port = process.env.NODE_ENV === "production" ? 80 : 3000;
-app.listen({ port }, () => {
+app.listen({ port: process.env.PORT }, () => {
   console.log(
     `🚀 Server ready at http://localhost:${port}${server.graphqlPath}`
   );
