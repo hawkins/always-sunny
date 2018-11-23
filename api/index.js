@@ -9,7 +9,7 @@ const schema = buildSchema(`
   type Query {
     getEpisode(season: Int!, episode: Int!): Episode
     getEpisodes(season: Int, lead: String, guest: String, writer: String): [Episode]
-    getSeason(season: Int!): Season    
+    getSeason(season: Int!): Season
   }
 
   type Episode {
@@ -68,5 +68,4 @@ app.use(
 );
 
 /* Rock 'n' Roll */
-const port = process.env.NODE_ENV === "production" ? 80 : 3000;
-app.listen(port);
+app.listen(process.env.PORT);
