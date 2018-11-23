@@ -1,18 +1,9 @@
 {
-  "name": "the-gang-picks-an-api",
-  "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "node index.js",
-    "start": "NODE_ENV=production node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Josh Hawkins <hawkinswritescode@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "apollo-server-express": "^2.2.2",
     "express": "^4.16.2",
-    "express-graphql": "^0.6.11",
-    "graphql": "^0.12.3"
+    "graphql": "^14.0.2"
   }
 }
