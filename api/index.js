@@ -40,14 +40,14 @@ const typeDefs = gql`
 /* GraphQL Query Resolvers */
 const resolvers = {
   Query: {
-    getEpisode: ({ season, episode }) => {
+    getEpisode: (_, { season, episode }) => {
       let candidates = episodes.filter(
         ep => ep.season === season && ep.episode === episode
       );
       if (candidates.length > 0) return candidates[0];
       else return null;
     },
-    getEpisodes: ({ lead, writer, season, guest }) => {
+    getEpisodes: (_, { lead, writer, season, guest }) => {
       return episodes.filter(ep => {
         if (season && ep.season !== season) return false;
         if (lead && ep.lead.indexOf(lead) === -1) return false;
@@ -56,7 +56,7 @@ const resolvers = {
         return true;
       });
     },
-    getSeason: ({ season }) => {
+    getSeason: (_, { season }) => {
       return Series[season - 1];
     }
   }
@@ -78,6 +78,6 @@ app.get("/", (req, res) => {
 /* Rock 'n' Roll */
 app.listen({ port: process.env.PORT }, () => {
   console.log(
-    `🚀 Server ready at http://localhost:${port}${server.graphqlPath}`
+    `🚀 Server ready at :${process.env.PORT || 80}${server.graphqlPath}`
   );
 });
